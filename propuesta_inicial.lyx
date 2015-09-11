@@ -1,0 +1,143 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+Propuesta inicial de Trabajo de Inserción Profesional
+\end_layout
+
+\begin_layout Subsection*
+Tema: Desarrollo de aplicación de INFERNO® para Android
+\end_layout
+
+\begin_layout Subsection*
+Justificación e importancia del tema
+\end_layout
+
+\begin_layout Standard
+INFERNO® es un juego de cartas coleccionables (CCG) producido por OMG! entreteni
+miento.
+ Radicada en Mendoza, la empresa argentina comercializa su producto a todo
+ el país y organiza -entre otras cosas- eventos provinciales y nacionales
+ del juego.
+\end_layout
+
+\begin_layout Standard
+En los CCG's un jugador debe comprar cartas y combinarlas para armar su
+ propio mazo que competirá contra el de otros jugadores.
+ La elección de cartas a utilizar en un mazo es la que define la estrategia
+ y la forma de jugar con el mismo.
+ INFERNO cuenta en la actualidad con casi 1000 cartas diferentes.
+\end_layout
+
+\begin_layout Standard
+El desarrollo de una programa Android con herramientas del juego -con completo
+ consentimiento del dueño- incrementerá la visibilidad del producto, la
+ calidad y las formas de interactuar con el mismo, ayudando a atraer a nuevos
+ consumidores locales así como retener a los existentes.
+ Asimismo, la aplicación dejará las puertas abiertas a futuro a agregarle
+ la funcionalidad de poder jugar online, permitiendo a la empresa argentina
+ -y al desarrollador- extender su producto a nivel mundial y también tener
+ fácilmente un producto distribuido en diferentes idiomas.
+\end_layout
+
+\begin_layout Subsection*
+Objetivos del trabajo
+\end_layout
+
+\begin_layout Standard
+La aplicación permitirá a los jugadores acceder de manera virtual a la bibliotec
+a de cartas disponibles en el juego y, combinándolas, armar y organizar
+ mazos.
+ Se creará un potente motor de búsqueda con el que los usuarios podrán filtar
+ y encontrar fácilmente aquellas cartas que le sean útiles.
+ A su vez, los usuarios podrán combinar cartas que hayan buscado para guardarse
+ en listas o crear y administrar mazos.
+ También se tendrá cuidado con el aspecto visual y la usabilidad de la aplicació
+n para poder generar el impacto más positivo posible entre la comunidad
+ de jugadores.
+\end_layout
+
+\begin_layout Subsection*
+Lugar donde se realizará el trabajo
+\end_layout
+
+\begin_layout Standard
+Universidad Nacional de Quilmes
+\end_layout
+
+\begin_layout Subsection*
+Plan de trabajo
+\end_layout
+
+\begin_layout Subsection*
+Referencias
+\end_layout
+
+\begin_layout Itemize
+http://www.inferno.com.ar/
+\end_layout
+
+\begin_layout Itemize
+http://developer.android.com/
+\end_layout
+
+\end_body
+\end_document
