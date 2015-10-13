@@ -97,9 +97,8 @@ En los CCG's un jugador debe comprar cartas y combinarlas para armar su
 \end_layout
 
 \begin_layout Standard
-La implementación de la presente propuesta tiene por objetivo demostrar
- las capacidades de desarrollo para poder obtener futuro financiamiento
- en proyecyos similares.
+La implementación de la presente propuesta permitirá demostrar las capacidades
+ de desarrollo para poder obtener futuro financiamiento en proyectos similares.
  A su vez, la creación de un programa mobile con herramientas del juego
  -con completo consentimiento del dueño- incrementerá la visibilidad del
  producto, la calidad y las formas de interactuar con el mismo, ayudando
@@ -115,6 +114,11 @@ Objetivos del trabajo
 \end_layout
 
 \begin_layout Standard
+El desarrollo tiene por objetivo ser una demostración que permita obtener
+ futuro financiamiento en el presente proyecto o a través de nuevos clientes.
+\end_layout
+
+\begin_layout Standard
 La aplicación permitirá a los jugadores acceder de manera virtual a la bibliotec
 a de cartas disponibles en el juego y, combinándolas, armar y organizar
  mazos.
@@ -124,7 +128,7 @@ a de cartas disponibles en el juego y, combinándolas, armar y organizar
  en listas o crear y administrar mazos.
  También se tendrá cuidado con el aspecto visual y la usabilidad de la aplicació
 n para poder generar el impacto más positivo posible entre la comunidad
- de jugadores.
+ de jugadores y potenciales nuevos clientes.
 \end_layout
 
 \begin_layout Subsection*
@@ -141,40 +145,177 @@ Plan de trabajo
 
 \begin_layout Standard
 Debido a la baja carga horaria que poseo en el presente cuatrimestre por
- cursar tan sólo 10 horas semanales, se podrán asignar 24 horas semanales
+ cursar tan sólo 10 horas semanales, se podrán asignar 20 horas semanales
  para realizar el trabajo propuesto.
 \end_layout
 
 \begin_layout Standard
-Se realizarán las siguientes iteraciones incrementales semanales:
+Se realizarán las siguientes iteraciones incrementales:
 \end_layout
 
-\begin_layout Itemize
-Visualización datos de carta
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Iteración
 \end_layout
 
-\begin_layout Itemize
-Buscador de cartas con filtros de diferente nivel
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Duración
 \end_layout
 
-\begin_layout Itemize
-Carga de datos
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Objetivo
 \end_layout
 
-\begin_layout Itemize
-Creador de lista de cartas
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
 \end_layout
 
-\begin_layout Itemize
-Validaciones de reglas de armado de mazo sobre lista de cartas
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2 semanas
 \end_layout
 
-\begin_layout Itemize
-Documentación
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Visualización de cartas y carga de datos *
 \end_layout
 
-\begin_layout Itemize
-Informe
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2 semanas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Buscador de Cartas
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2 semanas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Listas de cartas y validación de mazos
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3 semanas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Documentación e informe
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+*Se prevé generar una base de datos con aproximadamente 1000 cartas, debido
+ a que una base de datos completa es importante para el objetivo de demo,
+ con lo cual la tarea de carga de datos no es trivial.
 \end_layout
 
 \begin_layout Subsection*
