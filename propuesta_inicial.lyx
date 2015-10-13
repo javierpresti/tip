@@ -73,7 +73,7 @@ Propuesta inicial de Trabajo de Inserción Profesional
 \end_layout
 
 \begin_layout Subsection*
-Tema: Desarrollo de aplicación de INFERNO® para Android
+Tema: Desarrollo de aplicación mobile de INFERNO®
 \end_layout
 
 \begin_layout Subsection*
@@ -97,14 +97,17 @@ En los CCG's un jugador debe comprar cartas y combinarlas para armar su
 \end_layout
 
 \begin_layout Standard
-El desarrollo de una programa Android con herramientas del juego -con completo
- consentimiento del dueño- incrementerá la visibilidad del producto, la
- calidad y las formas de interactuar con el mismo, ayudando a atraer a nuevos
- consumidores locales así como retener a los existentes.
- Asimismo, la aplicación dejará las puertas abiertas a futuro a agregarle
- la funcionalidad de poder jugar online, permitiendo a la empresa argentina
- -y al desarrollador- extender su producto a nivel mundial y también tener
- fácilmente un producto distribuido en diferentes idiomas.
+La implementación de la presente propuesta tiene por objetivo demostrar
+ las capacidades de desarrollo para poder obtener futuro financiamiento
+ en proyecyos similares.
+ A su vez, la creación de un programa mobile con herramientas del juego
+ -con completo consentimiento del dueño- incrementerá la visibilidad del
+ producto, la calidad y las formas de interactuar con el mismo, ayudando
+ a atraer a nuevos consumidores locales así como retener a los existentes
+ y dejará las puertas abiertas a futuro a agregar la funcionalidad de poder
+ jugar online, permitiendo a la empresa argentina -y al desarrollador- extender
+ su producto a nivel mundial y también tener fácilmente un producto distribuido
+ en diferentes idiomas.
 \end_layout
 
 \begin_layout Subsection*
@@ -115,7 +118,7 @@ Objetivos del trabajo
 La aplicación permitirá a los jugadores acceder de manera virtual a la bibliotec
 a de cartas disponibles en el juego y, combinándolas, armar y organizar
  mazos.
- Se creará un potente motor de búsqueda con el que los usuarios podrán filtar
+ Se creará un potente motor de búsqueda con el que los usuarios podrán filtrar
  y encontrar fácilmente aquellas cartas que le sean útiles.
  A su vez, los usuarios podrán combinar cartas que hayan buscado para guardarse
  en listas o crear y administrar mazos.
@@ -137,20 +140,41 @@ Plan de trabajo
 \end_layout
 
 \begin_layout Standard
-Se tendrá una dedicación de 22 horas semanales para realizar el trabajo
- propuesto, quedando la distribución de tareas de la siguiente manera:
+Debido a la baja carga horaria que poseo en el presente cuatrimestre por
+ cursar tan sólo 10 horas semanales, se podrán asignar 24 horas semanales
+ para realizar el trabajo propuesto.
+\end_layout
+
+\begin_layout Standard
+Se realizarán las siguientes iteraciones incrementales semanales:
 \end_layout
 
 \begin_layout Itemize
-28 de septiembre al 11 de octubre: Diseño
+Visualización datos de carta
 \end_layout
 
 \begin_layout Itemize
-12 de octubre al 12 de noviembre: Implementación
+Buscador de cartas con filtros de diferente nivel
 \end_layout
 
 \begin_layout Itemize
-13 al 20 de noviembre: Documentación
+Carga de datos
+\end_layout
+
+\begin_layout Itemize
+Creador de lista de cartas
+\end_layout
+
+\begin_layout Itemize
+Validaciones de reglas de armado de mazo sobre lista de cartas
+\end_layout
+
+\begin_layout Itemize
+Documentación
+\end_layout
+
+\begin_layout Itemize
+Informe
 \end_layout
 
 \begin_layout Subsection*
@@ -158,11 +182,36 @@ Referencias
 \end_layout
 
 \begin_layout Itemize
-http://www.inferno.com.ar/
+McWherter, J.
+ and Gowell, S.
+ Professional Mobile Application Development.
+ Indianapolis, Ind: John Wiley & Sons, Inc, 2012.
+ Print.
+ ISBN: 978-1118240687
 \end_layout
 
 \begin_layout Itemize
-http://developer.android.com/
+Lee, and Chaim Krause.
+ Beginning Android 4 application development.
+ Indianapolis, Ind: Wrox/John Wiley & Sons, 2012.
+ Print.
+ ISBN: 978-1118199541
+\end_layout
+
+\begin_layout Itemize
+Meier, Reto.
+ Professional Android 4 application development.
+ Indianapolis, IN: Wiley/Wrox, 2012.
+ Print.
+ ISBN: 978-1118102275
+\end_layout
+
+\begin_layout Itemize
+http://www.inferno.com.ar/ - Última visita: 27/10/15
+\end_layout
+
+\begin_layout Itemize
+http://developer.android.com/ - Última visita: 27/10/15
 \end_layout
 
 \end_body
