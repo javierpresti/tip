@@ -2,7 +2,7 @@
 \lyxformat 474
 \begin_document
 \begin_header
-\textclass paper
+\textclass article
 \use_default_options true
 \maintain_unincluded_children false
 \language spanish
@@ -99,17 +99,8 @@ Javier Presti
 
 \begin_layout Standard
 \paragraph_spacing other 5
-Director: Leonardo Gassman, Ing.
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing other 8
 \align center
-15 de febrero de 2016
-\end_layout
-
-\begin_layout Date
-15 de febrero de 2016
+Director: Leonardo Gassman, Ing.
 \end_layout
 
 \begin_layout Standard
@@ -140,36 +131,26 @@ Introducción
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset label
-LatexCommand label
-name "ccg_que-es"
-
-\end_inset
-
 INFERNO® es un juego nacional de cartas coleccionables (CCG).
  En los CCG's un jugador debe comprar cartas y combinarlas para armar su
  propio mazo que competirá contra el de otros jugadores.
  La elección de cartas a utilizar en un mazo es la que define la estrategia
  y la forma de jugar con el mismo.
  Este tipo de juego se renueva constantemente ya que nuevas cartas se van
- creando comúnmente a través de expansiones o ediciones, que vendrían a
- ser paquetes que extienden el juego actual.
+ creando comúnmente a través de expansiones o ediciones, que son paquetes
+ que extienden al juego actual.
  Las cartas se consiguen oficialmente a través de mazos pre-armados o de
  sobres con contenido aleatorio.
+ Los mismos están disponibles en comiquerías o a través de distribuidores
+ particulares.
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset label
-LatexCommand label
-name "ccg_historia"
-
-\end_inset
-
-El CCG es un tipo de juego que nació con Magic the Gathering® en el año
- 1993 y que es desde entonces popular.
+El CCG nació con Magic the Gathering® en el año 1993 y que es desde entonces
+ popular.
  Si bien en un comienzo sólo existía como un juego físico, en los últimos
- años el género se benefició de un auge con el advenimiento de muchos juegos
- digitales
+ años el género se benefició de un auge con el advenimiento de una gran
+ cantidad juegos digitales
 \begin_inset Foot
 status collapsed
 
@@ -197,48 +178,48 @@ i/1100-6432063 [Consulta: 14 febrero 2016]
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset label
-LatexCommand label
-name "inferno_que-es"
-
-\end_inset
-
-INFERNO fue creado en Mendoza por la empresa argentina OMG! entretenimiento
- que comercializa su producto a todo el país y organiza -entre otras cosas-
- eventos provinciales y nacionales del juego.
+El juego INFERNO fue creado en Mendoza por la empresa argentina OMG! entretenimi
+ento que comercializa su producto a todo el país y organiza -entre otras
+ cosas- eventos provinciales y nacionales del juego.
  Cuenta en la actualidad con más de 1000 cartas diferentes distribuidas
- entre 8 ediciones diferentes y con más planeadas para lanzar este año.
+ entre 8 ediciones y con más planeadas para lanzar este año.
  Este juego se distribuye, al menos por el momento, exclusivamente de manera
  física.
+ Una herramienta digital para ver y administrar los elementos del juego
+ (cartas, mazos) abriría las puertas a que el producto nacional crezca en
+ popularidad e incentive más a los actuales jugadores.
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset label
-LatexCommand label
-name "app_por-que"
-
+Un CCG tiene dos grandes partes importantes: la creación del mazo y su uso
+ (o sea, la acción de 
+\begin_inset Quotes eld
 \end_inset
 
-La creación de una herramienta digital para ver y administrar los elementos
- del juego (cartas, mazos) abre las puertas a que el producto nacional crezca
- en popularidad e incentiva más a los actuales jugadores.
- Asimismo, como programador el desarrollo de una aplicación Android es important
-e para a futuro poder asentarse con mayor facilidad en proyectos similares
- ya que el desarrollo mobile se encuentra en auge en la actualidad.
+jugar
+\begin_inset Quotes erd
+\end_inset
+
+).
+ Para crear un mazo, se deben buscar cartas potencialmente útiles para él.
+ Esto es un trabajo que requiere cierto tiempo, y es aquí donde un software
+ de búsqueda se vuelve muy práctico.
+ Con los filtros adecuados, se pueden armar mazos más fácil y rápidamente
+ y también se pueden descubrir estrategias que finalmente otorguen una posición
+ más favorable para el juego.
+ Asimismo, el poder ir almacenando y guardando mazos y listas de cartas
+ de manera digital le permite al jugador tener una mayor organización y
+ control de sus posibilidades de juego.
+ Crear listas que luego, en muchos casos, se transforman a mazos para jugar
+ es el paso natural que viene luego de la búsqueda de cartas y antes de
+ la compra física de cartas.
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset label
-LatexCommand label
-name "android_por-que"
-
-\end_inset
-
-La aplicación se realizó entonces sobre Android.
- Hoy en día el desarrollo de software se está dando mucho en el ámbito mobile
- ya que las personas usan cada vez más el teléfono y menos la PC.
- Asimismo, se escogió Android ya que es el sistema operativo más utilizado
- en teléfonos móviles
+Con respecto a las plataformas utilizadas para el desarrollo de software,
+ hoy en día se está dando mucho en el ámbito mobile ya que las personas
+ usan cada vez más el teléfono y menos la PC.
+ A su vez, Android es el sistema operativo más utilizado en teléfonos móviles
 \begin_inset Foot
 status collapsed
 
@@ -261,69 +242,21 @@ http://gs.statcounter.com/#mobile_os-AR-monthly-201601-201601-bar [Consulta:
 \end_inset
 
 .
+ Por esta razón es que Android es una fuerte elección al realizar una aplicación
+ que complemente un juego de cartas en Argentina.
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset label
-LatexCommand label
-name "app-acerca"
-
-\end_inset
-
-Teniendo el consentimiento del dueño del juego, se decidió hacer una aplicación
- que facilite al juego.
- Un CCG tiene dos grandes partes importantes: la creación del mazo y su
- uso (o sea, la acción de 
-\begin_inset Quotes eld
-\end_inset
-
-jugar
-\begin_inset Quotes erd
-\end_inset
-
-).
- El software creado se centra en herramientas para utilizar durante la primer
- parte (cuando se quiere crear un mazo).
- El objetivo de la aplicación es entonces la búsqueda de cartas y la creación
- de listas y mazos con cartas que luego físicamente se comprarán.
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset label
-LatexCommand label
-name "app_features_acerca"
-
-\end_inset
-
-La búsqueda de cartas potencialmente útiles para un mazo es un trabajo que
- requiere cierto tiempo, y es aquí donde un buscador se vuelve muy práctico.
- Con los filtros adecuados, se pueden armar mazos más fácil y rápidamente
- y también se pueden descubrir estrategias que finalmente otorguen una posición
- más favorable para el juego.
- Asimismo, el poder ir almacenando y guardando mazos y listas de cartas
- de manera digital le permite al jugador tener una mayor organización y
- control de sus posibilidades de juego.
- El poder crear listas que luego en muchos casos se transforman a mazos
- para jugar es el paso natural que viene luego de la búsqueda de cartas.
- Es por esto que se han creado estas funcionalidades en la aplicación desarrolla
-da para así satisfacer completamente la parte de generación de mazo del
- juego.
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset label
-LatexCommand label
-name "tip_acerca"
-
-\end_inset
-
 Este informe presenta el Trabajo de Inserción Profesional que da fin a la
  carrera de Técnico Universitario en Programación Informática.
- Se desarrolló el sistema de búsqueda y armado de listas de cartas del juego
- INFERNO.
- 
+ Teniendo el consentimiento del dueño, y dados los puntos anteriormente
+ expuestos, se realizó una aplicación del juego INFERNO para la plataforma
+ Android.
+ El objetivo del software es la búsqueda de cartas y la creación de listas
+ y mazos.
+
 \series bold
-La finalidad del mismo es ser una demostración para obtener financiamiento
+ La finalidad del mismo es ser una demostración para obtener financiamiento
 \series default
  para desarrollar una aplicación completa del juego, o proyectos similares
  sobre otros CCGs.
@@ -592,6 +525,7 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="1" columns="2">
 <features rotate="0" tabularvalignment="middle">
@@ -746,8 +680,8 @@ El objetivo del presente trabajo es presentar una demo de cara a obtener
  Es por esto que no estaba planeada la realización de tests automáticos
  para la presente aplicación, ya que los mismos requieren de horas de programaci
 ón y no sirven para garantizar los aspectos visuales y de usabilidad que
- busca esta demo y por lo tanto se decidió utilizar un mecanismo manual
- de testeo.
+ busca esta demo.
+ Por lo tanto se decidió utilizar un mecanismo manual de testeo.
  Se consideró -al ser una demo- importante que el producto se vea bien y
  que sea muy práctico para su uso así como que sea completo.
 \end_layout
@@ -1062,7 +996,8 @@ reference "sub:Cartas-con-doble-cara"
 
 \end_deeper
 \begin_layout Enumerate
-Compartir imagen de carta
+Compartir una carta en las redes sociales o aplicaciones de mensajería configura
+das en el dispositivo
 \end_layout
 
 \begin_layout Subsection
@@ -1115,10 +1050,6 @@ Se utiliza un Activity que es el encargado de ir cargando los diferentes
 En esta aplicación todas las pantallas que el usuario ve son fragments que
  van siendo reemplazados a excepción de la vista de una carta, que es otro
  Activity.
- Se tuvo que diseñar de esta manera ya que la librería de imágenes utilizada
- (Universal Image Loader) parece tener un bug que hace que no se limpie
- la cache desde la vista de lista de cartas y cada vez que se ingresa en
- la vista de carta se incrementa el uso de memoria que luego no es liberado.
 \end_layout
 
 \begin_layout Standard
@@ -1128,6 +1059,7 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename arq_searchers.png
 	width 12cm
@@ -1141,7 +1073,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Flujo simplificado de búsqueda de carta
+Diagrama simplificado de los diferentes estados en la búsqueda de una carta
 \end_layout
 
 \end_inset
@@ -1226,17 +1158,24 @@ id interno
  Forzando a que los primeros ids tengan 4 y 3 dígitos se asegura que una
  carta esté identificada con un número de 7 dígitos y que siempre sean diferente
 s.
- Es por esto que se decidió utilizar este identificador de carta como el
- id de los registros de la tabla.
- Es importante destacar que entonces los ids no son consecutivos, pero sí
- incrementales (ver tabla 
+\end_layout
+
+\begin_layout Standard
+Al utilizar este id de 7 dígitos las cartas mantienen su orden cronológico
+ al quedarse ordenadas primero por su id interno y luego por su edición.
+ Por ejemplo: la edición con id 114 reedita la carta con id 1002 que sólo
+ había sido editada en la edición con id 101.
+ La reedición tendrá entonces el id 1002114, número que se encuentra entre
+ 1002101 (la carta reeditada) y 1003101 (la siguiente carta de la edición
+ 101).
+ Ver tabla 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tabla-ids"
 
 \end_inset
 
-).
+.
 \end_layout
 
 \begin_layout Standard
@@ -1246,6 +1185,7 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="3">
 <features rotate="0" tabularvalignment="middle">
@@ -1432,6 +1372,24 @@ name "tabla-ids"
 \end_layout
 
 \begin_layout Standard
+Con respecto a las imágenes de las cartas, se las quiso nombrar de alguna
+ manera que identifique su contenido, es decir que contenga la edición y
+ el número de carta.
+ Dado que el id de una carta de 7 dígitos mencionado anteriormente posee
+ esta información, se lo puede incluir en el nombre de la imagen.
+ La ventaja de esto es que podemos vincular a una carta directamente con
+ su imagen, sin necesidad de consultar por un campo que contenga el nombre
+ con el que se haya guardado.
+\end_layout
+
+\begin_layout Standard
+Por las razones mencionadas anteriormente es que se decidió utilizar este
+ identificador de carta como el id de los registros de la tabla.
+ Es importante destacar que entonces los ids no son consecutivos, pero sí
+ incrementales.
+\end_layout
+
+\begin_layout Standard
 Se creó un campo para guardar el tipo completo de una carta y otro más por
  cada subcategoría (ver Tipos en 
 \begin_inset CommandInset ref
@@ -1541,7 +1499,7 @@ Al mostrar una carta, lo más importante y lo que más impacta visualmente
  El propósito de incluirlos es el de proveer fácil lectura de los mismos.
  Teniendo esto en mente es que se decidió utilizar un color negro sólido
  de fondo y usar letras blancas de un tamaño generoso.
- En la vista vertical se decidió que la imágen ocupase toda la pantalla
+ En la vista vertical se decidió que la imagen ocupase toda la pantalla
  y los textos debajo y en la vista horizontal lado a lado (ver figura 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1559,6 +1517,7 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="1" columns="2">
 <features rotate="0" tabularvalignment="middle">
@@ -1678,6 +1637,7 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="1" columns="2">
 <features rotate="0" tabularvalignment="middle">
@@ -1800,7 +1760,7 @@ El mismo procedimiento de buscar un símbolo especial en el texto se sigue
 \end_layout
 
 \begin_layout Subsection
-Búsqueda de cartas
+Tipos de buscadores
 \end_layout
 
 \begin_layout Standard
@@ -1824,6 +1784,7 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="3">
 <features rotate="0" tabularvalignment="middle">
@@ -1967,6 +1928,7 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="3">
 <features rotate="0" tabularvalignment="middle">
@@ -2093,7 +2055,7 @@ El buscador básico es el que se abre por defecto.
  y no es necesario sobrecargar la pantalla de tantos elementos.
  Con las opciones más importantes la aplicación se ve más elegante y destaca
  más la imagen de fondo, dándole un mayor atractivo visual.
- En este buscador se excluyen de los resultados las fichas ya difícilmente
+ En este buscador se excluyen de los resultados las fichas ya que difícilmente
  un usuario esté interesado en ellas.
 \end_layout
 
@@ -2125,7 +2087,7 @@ Listado
 \end_layout
 
 \begin_layout Standard
-Se tendrán dos tipos diferentes de listado: en grilla y lista.
+Se tendrán dos tipos diferentes de listado: grilla y lista.
  La primera mostrará las imágenes de las cartas y la segunda un resumen
  de las mismas con sus datos más relevantes, entre ellos su ilustración.
  Se pensó en tener los artes guardados de manera separada para no tener
@@ -2182,7 +2144,17 @@ Carga de datos
 
 \begin_layout Standard
 Las tablas se crearon desde planillas de cálculo y se guardaron en una base
- de datos SQLite dentro de la aplicación.
+ de datos SQLite
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://www.sqlite.org [Consulta: 15 febrero 2016]
+\end_layout
+
+\end_inset
+
+ dentro de la aplicación.
  Esto se realizó utilizando el software Sqliteman
 \begin_inset Foot
 status collapsed
@@ -2515,6 +2487,7 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="1" columns="2">
 <features rotate="0" tabularvalignment="middle">
@@ -2599,8 +2572,8 @@ Buscador básico
 \end_layout
 
 \begin_layout Standard
-Se utilizó AutoCompleteTextView para proveer sugerencias de autocompletado
- en el campo de texto.
+En el campo de texto se utilizó AutoCompleteTextView para proveer sugerencias
+ de auto-completado.
  Se realizan queries por nombre de carta a la base de datos mientras se
  está escribiendo y se muestran los posibles resultados.
  No se mejoró la performance de esto ya que funciona de manera muy fluida.
@@ -2690,7 +2663,7 @@ Se comenzó realizando una GridView (lista en grilla) mostrando las imágenes
  buscadores.
  Pero en este caso se trata de muchas imágenes que el usuario querrá ver
  de manera fluida.
- Para conseguir esto se utilizó una librería externa, se probó Picasso
+ Para conseguir esto se decidió usar una librería externa, se probó Picasso
 \begin_inset Foot
 status collapsed
 
@@ -2711,8 +2684,9 @@ https://github.com/nostra13/Android-Universal-Image-Loader [Consulta: 14
 
 \end_inset
 
- y se decidió usar la segunda por su mayor capacidad de configuración y
- performance que demostró en la aplicación.
+.
+ Se utilizó la segunda por su mayor capacidad de configuración y performance
+ que demostró en la aplicación.
  Esta librería junto a la reducción del peso de las imágenes resultó en
  un scroll fluido por las imágenes.
 \end_layout
@@ -2731,6 +2705,7 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="2">
 <features rotate="0" tabularvalignment="middle">
@@ -2913,11 +2888,11 @@ https://developers.google.com/admob [Consulta: 14 febrero 2016]
 
 \end_inset
 
- que está perfectamente integrado con Android.
+, el cual está perfectamente integrado con Android.
  Para esto hay que registrarse en el servicio y una vez hecho esto se solicitan
  códigos para poder mostrar las publicidades.
- Simplemente en la vista se debe incluir al banner y desde el código añadirle
- un código y cargarlo.
+ Simplemente en la vista se debe incluir al banner y desde la implementación
+ añadirle un código y cargarlo.
  Google se encarga de, según datos como el lenguaje del dispositivo y el
  país en el que se encuentra, cargar publicidad pertinente en el banner
  que hemos incluido.
@@ -2927,9 +2902,10 @@ https://developers.google.com/admob [Consulta: 14 febrero 2016]
 Finalmente se subió la aplicación a Google Play Store.
  Para ello hubo que registrarse como desarrollador ante Google (pagando
  la cuota única de 25 dólares).
- Un problema interesante que se tuvo con respecto a esto fue que al realizar
- la descripción del programa, asignarle un icono y subirlo la aplicación
- fue suspendida y se envió una advertencia al desarrollador.
+ Un problema interesante que se tuvo con respecto a esto fue al realizar
+ la descripción del programa, asignarle un icono y subirlo.
+ Al tener la aplicación lista, fue suspendida y se envió una advertencia
+ al desarrollador.
  La única razón que se brindó por email fue 
 \begin_inset Quotes eld
 \end_inset
@@ -3168,6 +3144,7 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/carta_campos.png
 	height 7cm
@@ -3214,7 +3191,7 @@ Senda Son cuatro y una Neutral.
 \labelwidthstring 00.00.0000
 Tipo Definen las reglas por las que se rige una carta y la forma en la que
  puede ser utilizada.
- Se divide en tipo básico, subtipo y subtipo.
+ Se divide en tipo básico, supertipo y subtipo.
 \end_layout
 
 \begin_layout Labeling
@@ -3302,12 +3279,52 @@ Búsqueda de cartas
 \end_layout
 
 \begin_layout Standard
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0col%
+width "50col%"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset label
+LatexCommand label
+name "cartas_a_buscar"
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename images/carta_a_buscar.jpg
+	height 6cm
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Carta a buscar
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 Disponemos de tres instancias diferentes de buscadores que llamamos Básica,
  Extendida y Avanzada.
- Para acceder a la búsqueda Básica, debemos dirigirnos al botón que se halla
- en el derecho de la Barra Superior de la pantalla al inicio de la aplicación.
- A la derecha del mismo, hallamos el icono de Búsqueda Extendida, y correlativo
- a tal, encontramos el icono de Búsqueda Avanzada.
+ Para acceder a la búsqueda básica, debemos dirigirnos al botón que se halla
+ en el derecho de la barra superior de la pantalla al inicio de la aplicación.
+ A la derecha del mismo, hallamos el icono de búsqueda extendida, y correlativo
+ a tal, encontramos el icono de búsqueda avanzada.
+\end_layout
+
+\begin_layout Standard
+Se buscará la carta de la derecha.
 \end_layout
 
 \begin_layout Standard
@@ -3323,78 +3340,381 @@ Buscar
 .
 \end_layout
 
+\begin_layout Standard
+En el buscador avanzado el término 
+\begin_inset Quotes eld
+\end_inset
+
+En el campo X seleccionar Y
+\begin_inset Quotes erd
+\end_inset
+
+ significa 
+\begin_inset Quotes eld
+\end_inset
+
+Seleccionar X del menú que se encuentra en el extremo izquierdo y luego
+ elegir Y del menú que se encuentra más a la derecha en la misma fila
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Recordar que en este buscador los filtros se agregan con el botón 
+\begin_inset Quotes eld
+\end_inset
+
+Agregar filtro
+\begin_inset Quotes erd
+\end_inset
+
+ y, a menos que se indique lo contrario, el campo y/o/no debe seleccionarse
+ como 
+\begin_inset Quotes eld
+\end_inset
+
+y
+\begin_inset Quotes erd
+\end_inset
+
+ u 
+\begin_inset Quotes eld
+\end_inset
+
+o
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Enumerate
 Poder buscar una carta según campos:
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Nombre: En la búsqueda básica, debemos ingresar el término que deseamos
- buscar en el cuadro de texto que se halla en el extremo superior izquierdo.
- Cabe aclarar que en esta instancia de búsqueda se filtrarán todas las cartas
- que contengan dichos caracteres ingresados tanto en el nombre de la carta,
- como en el campo de texto de las mismas.
- Con la búsqueda extendida, debemos ingresar el término que deseamos buscar
- en el cuadro de texto del campo.
- Para realizar la misma mediante la búsqueda avanzada, debemos seleccionar
- el campo correspondiente e ingresar los caracteres a buscar en el cuadro
- de texto.
- En los 3 tipos de búsquedas al escribir los caracteres la aplicación ofrece
- opciones de auto-completado de texto con resultados posibles.
+Nombre: En la búsqueda básica, ingresar 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Dacal
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ en el cuadro de texto que se halla en el extremo superior izquierdo.
+ Con la búsqueda extendida, ingresar 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Dacal
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ en el cuadro de texto 
+\emph on
+Nombre
+\emph default
+.
+ En la búsqueda avanzada, seleccionar el campo 
+\emph on
+Nombre
+\emph default
+ e ingresar 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Dacal
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ en el cuadro de texto, dejando el menú en 
+\begin_inset Quotes eld
+\end_inset
+
+contiene
+\begin_inset Quotes erd
+\end_inset
+
+ o en 
+\begin_inset Quotes eld
+\end_inset
+
+empieza con
+\begin_inset Quotes erd
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
-Texto: Análogo a la búsqueda por nombre pero este campo no cuenta con auto-compl
-etado.
+Texto: En la búsqueda básica, ingresar 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Reptil
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ en el cuadro de texto que se halla en el extremo superior izquierdo.
+ Con la búsqueda extendida, debemos ingresar 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Reptil
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ en el cuadro de texto llamado 
+\emph on
+Texto
+\emph default
+.
+ En la búsqueda avanzada, seleccionar el campo 
+\emph on
+Texto
+\emph default
+ e ingresar 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Reptil
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ en el cuadro de texto, dejando el menú en 
+\emph on
+contiene
+\emph default
+ o en 
+\emph on
+empieza con
+\emph default
+.
 \end_layout
 
 \begin_layout Itemize
 Senda: Se puede filtrar desde cualquiera de los 3 buscadores.
- En todos los casos, para buscar por ella se deben seleccionar los iconos
- que se encuentran en la parte superior del buscador.
+ En todos los casos, seleccionar el cuarto icono que se encuentra en la
+ parte superior del buscador.
  Al hacerlo cambiarán su color a anaranjado.
- Para ver resultados que pertenezcan a más de una senda, seleccionar más
- de un icono.
 \end_layout
 
 \begin_layout Itemize
-Tipo: Se puede filtrar por los tipos básicos desde los 3 buscadores, pero
- el básico sólo permite que se filtre mediante uno solo.
- Tener en cuenta que en los buscadores básico y extendido este campo se
- llama simplemente 
+Tipo: En el buscador básico seleccionar 
+\emph on
+Aliado
+\emph default
+ en el menú 
+\emph on
+Tipo
+\emph default
+.
+ En el buscador extendido seleccionar 
+\emph on
+Aliado
+\emph default
+ en el menú 
+\emph on
+Tipo
+\emph default
+, 
+\emph on
+Único
+\emph default
+ en 
+\emph on
+Supertipo
+\emph default
+ y 
+\emph on
+Humano
+\emph default
+ en 
+\emph on
+Subtipo
+\emph default
+.
+ En el buscador avanzado seleccionar 
+\emph on
+Aliado
+\emph default
+ en el campo 
+\emph on
+Tipo básico
+\emph default
+, 
+\emph on
+Único
+\emph default
+ en 
+\emph on
+Supertipo
+\emph default
+ y 
+\emph on
+Humano
+\emph default
+ en 
+\emph on
+Subtipo
+\emph default
+.
+\end_layout
+
+\begin_layout Itemize
+Edición: Desde el buscador extendido o avanzado, en el campo 
+\emph on
+Edición
+\emph default
+ seleccionar 
+\emph on
+Destino
+\emph default
+.
+\end_layout
+
+\begin_layout Itemize
+Rareza: Desde el buscador extendido o avanzado, en el campo 
+\emph on
+Rareza
+\emph default
+ seleccionar 
+\emph on
+Épica
+\emph default
+.
+\end_layout
+
+\begin_layout Itemize
+Habilidades con palabra clave: Desde el buscador extendido o avanzado, en
+ el campo 
+\emph on
+Habilidad
+\emph default
+ seleccionar 
+\emph on
+Vínculo
+\emph default
+.
+\end_layout
+
+\begin_layout Itemize
+Coste: Desde el buscador extendido, en el campo junto a 
+\emph on
+Coste=
+\emph default
+ seleccionar 
+\emph on
+3
+\emph default
+.
+ En el buscador avanzado, en el campo 
+\emph on
+Coste
+\emph default
+ seleccionar 
+\emph on
+3
+\emph default
+.
+\end_layout
+
+\begin_layout Itemize
+Fuerza: Desde el buscador extendido, en el campo junto a 
+\emph on
+Fue=
+\emph default
+ seleccionar 
+\emph on
+3
+\emph default
+.
+ En el buscador avanzado, en el campo 
+\emph on
+FUE
+\emph default
+ seleccionar 
+\emph on
+3
+\emph default
+.
+\end_layout
+
+\begin_layout Itemize
+Resistencia: Desde el buscador extendido, en el campo junto a 
+\emph on
+Res=
+\emph default
+ seleccionar 
+\emph on
+4
+\emph default
+.
+ En el buscador avanzado, en el campo 
+\emph on
+RES
+\emph default
+ seleccionar 
+\emph on
+4
+\emph default
+.
+\end_layout
+
+\begin_layout Itemize
+Artista: En el buscador avanzado seleccionar el campo 
+\emph on
+Artista
+\emph default
+ e ingresar 
 \begin_inset Quotes eld
 \end_inset
 
-Tipo
+zubeldia
 \begin_inset Quotes erd
 \end_inset
 
- y que el primero no cuenta con filtros para supertipo y subtipo.
- En todos los casos, para buscar por tipo, existe un menú desplegable con
- los tipos de carta a seleccionar.
+ en el campo de texto, dejando el menú en 
+\emph on
+contiene
+\emph default
+.
 \end_layout
 
 \begin_layout Itemize
-Edición, Rareza, Habilidades con palabra clave: Desde el buscador extendido
- o avanzado seleccionar el campo correspondiente para agregar el filtro.
-\end_layout
-
-\begin_layout Itemize
-Coste, Fuerza, Resistencia: Desde el buscador extendido o avanzado se pueden
- filtrar estos campos.
- Ambos poseen menús desplegables con el valor a buscar y con la opción de
- buscar por igualdad, mayor o menor.
-\end_layout
-
-\begin_layout Itemize
-Artista: En el buscador avanzado agregar el filtro seleccionando el campo
- Artista.
-\end_layout
-
-\begin_layout Itemize
-Formato: Desde cualquier buscador seleccionar el campo Formato.
- Tener en cuenta que en la búsqueda básica no es posible buscar por más
- de un formato.
+Formato: En cualquier buscador en el campo 
+\emph on
+Formato
+\emph default
+ seleccionar 
+\emph on
+CdU
+\emph default
+.
 \end_layout
 
 \end_deeper
@@ -3402,19 +3722,28 @@ Formato: Desde cualquier buscador seleccionar el campo Formato.
 Incluir o excluir las cartas de tipo ficha de la búsqueda: El buscador básico
  no dispone de esta opción, sino que por defecto siempre excluye las cartas
  de tipo ficha de la búsqueda.
- En el buscador extendido existe un CheckBox que dice “Mostrar fichas”,
- el mismo se puede activar o deshabilitar según se deseen incluir o excluir
- las cartas de tipo ficha de la búsqueda.
- En el caso del buscador avanzado, es necesario seleccionar el campo “Tipo
- Básico
-\begin_inset Quotes erd
-\end_inset
-
- y luego elegir 
-\begin_inset Quotes eld
-\end_inset
-
-Ficha” para incluirlas o excluirlas.
+ En el buscador extendido existe un CheckBox que dice “
+\emph on
+Mostrar fichas
+\emph default
+”, dejarlo desactivado.
+ En el caso del buscador avanzado, en el campo 
+\emph on
+Tipo Básico
+\emph default
+ seleccionar 
+\emph on
+Ficha
+\emph default
+ y en el campo 
+\emph on
+y/o/no
+\emph default
+ elegir 
+\emph on
+no
+\emph default
+.
 \end_layout
 
 \begin_layout Enumerate
@@ -3425,40 +3754,40 @@ Listar el resultado de la búsqueda:
 \begin_layout Itemize
 Con imágenes: Con el buscador básico no es posible ver este tipo de resultado.
  En los otros dos seleccionar 
-\begin_inset Quotes eld
-\end_inset
-
+\emph on
 Grilla
-\begin_inset Quotes erd
-\end_inset
-
+\emph default
  en el menú desplegable que se encuentra a la derecha del texto 
 \begin_inset Quotes eld
 \end_inset
 
+
+\emph on
 Ver:
+\emph default
+
 \begin_inset Quotes erd
 \end_inset
 
-.
+ y realizar una búsqueda.
 \end_layout
 
 \begin_layout Itemize
 Con descripción detallada: Con el buscador básico se accede siempre a este
  tipo de resultado al realizar una búsqueda.
- En los otros dos casos seleccionar 
-\begin_inset Quotes eld
-\end_inset
-
+ En los otros dos casos seleccionar antes 
+\emph on
 Lista
-\begin_inset Quotes erd
-\end_inset
-
+\emph default
  del menú desplegable que se encuentra a la derecha del texto 
 \begin_inset Quotes eld
 \end_inset
 
+
+\emph on
 Ver:
+\emph default
+
 \begin_inset Quotes erd
 \end_inset
 
@@ -3468,60 +3797,94 @@ Ver:
 \end_deeper
 \begin_layout Enumerate
 Aplicar criterios de orden a los resultados según los campos de las cartas:
- En los buscadores extendido y avanzado seleccionar del menú desplegable
- junto al texto 
+ Para ordenar de manera descendente por fuerza, en los buscadores extendido
+ y avanzado seleccionar 
+\emph on
+FUE
+\emph default
+ del menú desplegable junto al texto 
 \begin_inset Quotes eld
 \end_inset
 
+
+\emph on
 Orden:
+\emph default
+
 \begin_inset Quotes erd
 \end_inset
 
- el campo por el que se desea ordenar los resultados de la búsqueda.
- En el menú contiguo seleccionar la dirección de la flecha que representa
- el orden ascendente o descendente.
+.
+ En el menú contiguo seleccionar la dirección de la flecha hacia abajo.
 \end_layout
 
 \begin_layout Enumerate
-Ver el detalle de una carta buscada: Tanto en el modo lista, o bien en el
- modo grilla, sólo con seleccionar una carta es posible acceder a sus detalles.
+Ver el detalle de una carta buscada: Realizar una búsqueda.
+ Tanto en el modo lista, o bien en el modo grilla, sólo con seleccionar
+ una carta es posible acceder a sus detalles.
  Si se realiza una búsqueda con un sólo resultado también se accede directamente
  a los detalles de la carta.
- Allí se muestra su imagen en tamaño completo y en buena calidad, ediciones
- en las que fue impresa (escritas con un color diferente detallando la rareza
- que posee en cada una), formatos en los que es válida, valores de todos
- sus campos y al final se describen las erratas, limitaciones y prohibiciones
- de la carta.
- 
+ Allí se muestra su imagen en tamaño completo y en buena calidad, formatos
+ en los que es válida, valores de todos sus campos y al final se describen
+ las erratas, limitaciones y prohibiciones de la carta.
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Al tocar sobre una palabra clave de habilidad se accede a su descripción.
+Descripción de habilidades con palabra clave: Tocar sobre 
+\emph on
+Vínculo
+\emph default
+ para acceder a su descripción.
 \end_layout
 
 \begin_layout Itemize
-Es posible visualizar el reverso de una carta tocando sobre la imagen.
- De la misma manera se vuelve a ver el anverso.
+Visualización de ambas partes de la carta donde aplique(2.9): En una búsqueda
+ de cualquier tipo seleccionar 
+\emph on
+Demonio
+\emph default
+ en el campo 
+\emph on
+Tipo
+\emph default
+.
+ Luego de buscar elegir cualquier resultado.
+ Tocar sobre la imagen para ver el reverso y anverso de la carta.
 \end_layout
 
 \begin_layout Itemize
-Para ver las diferentes ediciones tocar sobre los nombres de ellas que aparecen
- debajo de la imagen, o tocar sobre la parte inferior de la imagen.
+Ediciones en las que fue impresa (detallando la rareza que posee en cada
+ una) y la visualización de las mismas: Realizar una búsqueda por nombre
+ escribiendo 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+realidad
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Debajo de la imagen se detallan las ediciones en las que la carta fue impresa
+ y el color de fuente de cada una denota su rareza.
+ Para ver las diferentes ediciones tocar sobre los nombres de ellas, o tocar
+ sobre la parte inferior de la imagen.
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-Compartir imagen de carta: Ir a la vista de detalle de carta y seleccionar
- la opción 
-\begin_inset Quotes eld
-\end_inset
-
+Compartir una carta en las redes sociales o aplicaciones de mensajería configura
+das en el dispositivo: Ir a la vista de detalle de carta y seleccionar la
+ opción 
+\emph on
 Compartir
-\begin_inset Quotes erd
-\end_inset
-
+\emph default
  del menú desplegable desde el extremo derecho de la pantalla.
+ Luego elegir Gmail para enviarla por email.
 \end_layout
 
 \begin_layout Subsection
@@ -3534,7 +3897,11 @@ Para ver las listas de cartas, desde un buscador acceder desde el menú que
 \begin_inset Quotes eld
 \end_inset
 
+
+\emph on
 Listas de cartas
+\emph default
+
 \begin_inset Quotes erd
 \end_inset
 
@@ -3543,12 +3910,19 @@ Listas de cartas
 
 \begin_layout Enumerate
 Crear lista: En las listas de cartas, en el campo de texto superior escribir
- el nombre de la lista y aceptar el texto ingresado o tocar sobre el botón
  
+\emph on
+Fuertes
+\emph default
+ y aceptar el texto ingresado o tocar sobre el botón 
 \begin_inset Quotes eld
 \end_inset
 
+
+\emph on
 +
+\emph default
+
 \begin_inset Quotes erd
 \end_inset
 
@@ -3556,35 +3930,160 @@ Crear lista: En las listas de cartas, en el campo de texto superior escribir
 \end_layout
 
 \begin_layout Enumerate
-Agregar carta a lista: Ir a la vista de detalle de carta y seleccionar la
- opción 
+Agregar carta a lista: Crear la lista 
+\emph on
+Fuertes
+\emph default
+.
+ Realizar una búsqueda, seleccionar una carta y al ir a la vista de detalle
+ de carta seleccionar la opción 
 \begin_inset Quotes eld
 \end_inset
 
+
+\emph on
 Agregar a lista
+\emph default
+
 \begin_inset Quotes erd
 \end_inset
 
  del menú desplegable desde el extremo derecho de la pantalla.
- Luego elegir la lista a la que queremos agregar la carta.
+ Luego elegir la lista 
+\emph on
+Fuertes
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Ver detalle de cartas, con cantidad de cada una y total: Crear la lista
  
+\emph on
+Fuertes,
+\emph default
+ agregarle una vez la carta de nombre 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Zustatek, guardián del bosque
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ y dos veces la carta llamada 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Araña gigante
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ En las listas de cartas, al lado del nombre 
+\emph on
+Fuertes
+\emph default
+ se detalla entre paréntesis que posee 3 cartas.
+ Al seleccionar la lista se accede a las 2 cartas diferentes que le hemos
+ agregado (
+\emph on
+Zustatek
+\emph default
+ y la 
+\emph on
+Araña
+\emph default
+) junto a la cantidad respectiva de cada una.
+ Al seleccionar 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Araña gigante
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ se ve su detalle y en la parte superior derecha de la pantalla la cantidad
+ de la misma en la lista (2).
 \end_layout
 
 \begin_layout Enumerate
-Ver detalle de cartas, con cantidad de cada una y total: En las listas de
- cartas, al lado del nombre de cada una se detalla entre paréntesis la cantidad
- de cartas que posee.
- Al seleccionar una lista se accede a las cartas que contiene junto a la
- cantidad de cada una.
- Al seleccionar una carta se ve su detalle y en la parte superior derecha
- de la pantalla la cantidad de la misma en la lista.
-\end_layout
+Editar o eliminar cantidad de una carta: Crear la lista 
+\emph on
+Fuertes,
+\emph default
+ agregarle la carta de nombre 
+\begin_inset Quotes eld
+\end_inset
 
-\begin_layout Enumerate
-Editar o eliminar cantidad de una carta: En las listas de cartas, seleccionar
- una lista y luego una carta.
+
+\emph on
+Zustatek, guardián del bosque
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ una vez y la carta llamada 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Araña gigante
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ dos veces.
+ En las listas de cartas, seleccionar 
+\emph on
+Fuertes
+\emph default
+ y luego 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Araña gigante
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
  En la parte superior derecha de la pantalla aparece su cantidad.
  Tocar sobre ella y desde el diálogo que se abre tocar sobre 
+\begin_inset Quotes eld
+\end_inset
+
++
+\begin_inset Quotes erd
+\end_inset
+
+ 2 veces para aumentar la cantidad a 4 y seleccionar 
+\emph on
+Ok
+\emph default
+.
+ Para eliminar la carta, desde el diálogo elegir 
+\emph on
+Eliminar
+\emph default
+ o tocar sobre 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3592,37 +4091,20 @@ Editar o eliminar cantidad de una carta: En las listas de cartas, seleccionar
 \begin_inset Quotes erd
 \end_inset
 
- y 
-\begin_inset Quotes eld
-\end_inset
-
-+
-\begin_inset Quotes erd
-\end_inset
-
- para reducir y aumentar la cantidad respectivamente y seleccionar 
-\begin_inset Quotes eld
-\end_inset
-
+ hasta llevar la cantidad a 0 y seleccionar 
+\emph on
 Ok
-\begin_inset Quotes erd
-\end_inset
-
-.
- Para eliminar la carta, llevar la cantidad a 0 o desde el diálogo elegir
- 
-\begin_inset Quotes eld
-\end_inset
-
-Eliminar
-\begin_inset Quotes erd
-\end_inset
-
+\emph default
 .
 \end_layout
 
 \begin_layout Enumerate
-Eliminar lista: En las listas de cartas, tocar sobre una 
+Eliminar lista: Crear la lista 
+\emph on
+Fuertes
+\emph default
+.
+ En las listas de cartas, tocar sobre la 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3630,13 +4112,88 @@ X
 \begin_inset Quotes erd
 \end_inset
 
- junto al nombre de una lista y confirmar el diálogo.
+ junto al nombre 
+\emph on
+Fuertes
+\emph default
+ y confirmar el diálogo.
 \end_layout
 
 \begin_layout Enumerate
 Dada una lista, saber si cumple con las condiciones para ser mazo y en qué
- formatos lo es: En las listas de cartas, junto al nombre si es un mazo
- se detallan en qué formato es válido.
+ formatos lo es: Crear la lista 
+\emph on
+Mazo
+\emph default
+.
+ Ir al buscador básico, seleccionar 
+\emph on
+CdU
+\emph default
+ en Formato y la cuarta senda tocando sobre el icono verde.
+ Tocar Buscar.
+ Seleccionar el tercer elemento (
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Zustatek, guardián del bosque
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+) y añadir a la lista 
+\emph on
+Mazo
+\emph default
+.
+ Agregar de la misma manera las siguientes 13 cartas de la lista.
+ Volver al buscador para ir a las listas de las cartas.
+ Seleccionar la lista 
+\emph on
+Mazo
+\emph default
+.
+ Seleccionar y editar la cantidad de cada carta a 4, excepto 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Brújula de Estari
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ que se debe editar a cantidad 2 y 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Zustatek, guardián del bosque
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ que debe dejarse en 1 existencia.
+ Al volver a las listas de cartas, junto al nombre 
+\emph on
+Mazo
+\emph default
+ se detallará que es válido en los formatos 
+\emph on
+CdU
+\emph default
+ y Eterno (
+\emph on
+Et
+\emph default
+).
 \end_layout
 
 \end_body
