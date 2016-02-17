@@ -212,7 +212,7 @@ jugar
  control de sus posibilidades de juego.
  Crear listas que luego, en muchos casos, se transforman a mazos para jugar
  es el paso natural que viene luego de la búsqueda de cartas y antes de
- la compra física de cartas.
+ la compra física de las mismas.
 \end_layout
 
 \begin_layout Standard
@@ -3060,16 +3060,6 @@ Meier, Reto.
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-2"
-
-\end_inset
-
-http://www.inferno.com.ar [Consulta: 14 febrero 2016]
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
 key "key-3"
 
 \end_inset
@@ -3102,21 +3092,41 @@ https://www.sqlite.org/lang_createindex.html [Consulta: 14 febrero 2016]
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-7"
-
-\end_inset
-
-https://github.com/presti/tip [Consulta: 15 febrero 2016]
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
 key "key-1"
 
 \end_inset
 
 https://www.sqlite.org/queryplanner.html [Consulta: 14 febrero 2016]
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Repositorio
+\begin_inset space ~
+\end_inset
+
+de
+\begin_inset space ~
+\end_inset
+
+la
+\begin_inset space ~
+\end_inset
+
+aplicación: https://github.com/presti/tip
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Web
+\begin_inset space ~
+\end_inset
+
+de
+\begin_inset space ~
+\end_inset
+
+INFERNO: http://www.inferno.com.ar [Consulta: 14 febrero 2016]
 \end_layout
 
 \begin_layout Standard
@@ -3264,6 +3274,13 @@ Leyenda Texto de ambientación sin funcionalidad en el juego.
  Le otorga un contexto a la carta.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 \begin_inset CommandInset label
 LatexCommand label
@@ -3272,6 +3289,77 @@ name "sec:Prueba-de-casos"
 \end_inset
 
 Prueba de casos de uso
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0col%
+width "50col%"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/play_store.png
+	width 5.3cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Inferno en Google Play Store
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Para instalar el programa, desde la aplicación Google Play Store del dispositivo
+ buscar el término 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+inferno peltashield
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ y seleccionar la aplicación de nombre 
+\emph on
+Inferno
+\emph default
+ con desarrollador 
+\emph on
+PeltaShield
+\emph default
+ que posee el logotipo como se muestra en la imagen a la derecha.
+ Al ingresar al detalle seleccionar 
+\emph on
+Instalar
+\emph default
+ y aceptar el diálogo que nos muestra.
+ Una vez terminada la instalación abrir la aplicación llamada 
+\emph on
+Inferno
+\emph default
+ identificada con el logotipo.
+\end_layout
+
+\begin_layout Standard
+En el anexo siguiente se presentan ejemplos concretos para probar la aplicación.
 \end_layout
 
 \begin_layout Subsection
@@ -3297,7 +3385,7 @@ name "cartas_a_buscar"
 
 \begin_inset Graphics
 	filename images/carta_a_buscar.jpg
-	height 6cm
+	height 7.5cm
 
 \end_inset
 
@@ -3324,7 +3412,19 @@ Disponemos de tres instancias diferentes de buscadores que llamamos Básica,
 \end_layout
 
 \begin_layout Standard
-Se buscará la carta de la derecha.
+Se buscará la carta de la derecha 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Dacal, regente de Trion
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -3456,6 +3556,7 @@ empieza con
 \end_inset
 
 .
+ Al buscar aparece el detalle de la carta buscada.
 \end_layout
 
 \begin_layout Itemize
@@ -3514,13 +3615,19 @@ contiene
 empieza con
 \emph default
 .
+ Al buscar aparece el detalle de la carta buscada.
 \end_layout
 
 \begin_layout Itemize
 Senda: Se puede filtrar desde cualquiera de los 3 buscadores.
- En todos los casos, seleccionar el cuarto icono que se encuentra en la
- parte superior del buscador.
- Al hacerlo cambiarán su color a anaranjado.
+ En todos los casos, seleccionar el cuarto icono -el de color verde- que
+ se encuentra en la parte superior del buscador, cambiando su color de fondo
+ de gris a anaranjado.
+ Al realizar la búsqueda aparece el listado de cartas de la senda seleccionada
+ (199 cartas en el buscador básico y extendido, 203 en el avanzado) entre
+ las que se encuentra la carta buscada
+\emph on
+.
 \end_layout
 
 \begin_layout Itemize
@@ -3583,6 +3690,11 @@ Humano
 Subtipo
 \emph default
 .
+ Al realizar la búsqueda aparece el listado de cartas que poseen los tipos
+ seleccionados (435 cartas en el buscador básico, 16 en el extendido y avanzado)
+ entre las que se encuentra la carta buscada
+\emph on
+.
 \end_layout
 
 \begin_layout Itemize
@@ -3594,6 +3706,14 @@ Edición
 \emph on
 Destino
 \emph default
+.
+ Al realizar la búsqueda aparece el listado de cartas de la edición 
+\emph on
+Destino
+\emph default
+ (128 cartas en el buscador extendido y 132 en el avanzado) entre las que
+ se encuentra la carta buscada
+\emph on
 .
 \end_layout
 
@@ -3607,6 +3727,10 @@ Rareza
 Épica
 \emph default
 .
+ Al realizar la búsqueda aparece el listado de las 76 cartas de la rareza
+ seleccionada entre las que se encuentra la carta buscada
+\emph on
+.
 \end_layout
 
 \begin_layout Itemize
@@ -3619,6 +3743,13 @@ Habilidad
 \emph on
 Vínculo
 \emph default
+.
+ Al realizar la búsqueda aparece el listado de las 41 cartas con 
+\emph on
+Vínculo
+\emph default
+ entre las que se encuentra la carta buscada
+\emph on
 .
 \end_layout
 
@@ -3641,6 +3772,10 @@ Coste
 3
 \emph default
 .
+ Al realizar la búsqueda aparece el listado de las 224 cartas con coste
+ 3 entre las que se encuentra la carta buscada
+\emph on
+.
 \end_layout
 
 \begin_layout Itemize
@@ -3661,6 +3796,11 @@ FUE
 \emph on
 3
 \emph default
+.
+ Al realizar la búsqueda aparece el listado de cartas con fuerza 3 (84 cartas
+ en el buscador extendido y 86 en el avanzado) entre las que se encuentra
+ la carta buscada
+\emph on
 .
 \end_layout
 
@@ -3683,6 +3823,10 @@ RES
 4
 \emph default
 .
+ Al realizar la búsqueda aparece el listado de las 63 cartas con resistencia
+ 4 entre las que se encuentra la carta buscada
+\emph on
+.
 \end_layout
 
 \begin_layout Itemize
@@ -3694,7 +3838,11 @@ Artista
 \begin_inset Quotes eld
 \end_inset
 
+
+\emph on
 zubeldia
+\emph default
+
 \begin_inset Quotes erd
 \end_inset
 
@@ -3702,6 +3850,22 @@ zubeldia
 \emph on
 contiene
 \emph default
+.
+ Al realizar la búsqueda aparece el listado de las 22 cartas con el término
+ 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+zubeldia
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ como artista entre las que se encuentra la carta buscada
+\emph on
 .
 \end_layout
 
@@ -3714,6 +3878,14 @@ Formato
 \emph on
 CdU
 \emph default
+.
+ Al realizar la búsqueda aparece el listado de cartas de formato 
+\emph on
+CdU
+\emph default
+ (436 cartas en el buscador básico y extendido, 448 en el avanzado) entre
+ las que se encuentra la carta buscada
+\emph on
 .
 \end_layout
 
@@ -3744,6 +3916,10 @@ y/o/no
 no
 \emph default
 .
+ Al realizar la búsqueda aparece el listado de las 1030 cartas que no son
+ fichas
+\emph on
+.
 \end_layout
 
 \begin_layout Enumerate
@@ -3770,6 +3946,7 @@ Ver:
 \end_inset
 
  y realizar una búsqueda.
+ Aparecerá la grilla con las imágenes de las cartas.
 \end_layout
 
 \begin_layout Itemize
@@ -3792,6 +3969,7 @@ Ver:
 \end_inset
 
 .
+ Al buscar aparecerá la lista de las cartas con su descripción.
 \end_layout
 
 \end_deeper
@@ -3800,7 +3978,7 @@ Aplicar criterios de orden a los resultados según los campos de las cartas:
  Para ordenar de manera descendente por fuerza, en los buscadores extendido
  y avanzado seleccionar 
 \emph on
-FUE
+Tipo
 \emph default
  del menú desplegable junto al texto 
 \begin_inset Quotes eld
@@ -3815,27 +3993,130 @@ Orden:
 \end_inset
 
 .
- En el menú contiguo seleccionar la dirección de la flecha hacia abajo.
+ En el menú contiguo dejar la dirección de la flecha hacia arriba.
+ Al realizar la búsqueda aparece el listado de las cartas ordenadas según
+ su tipo
+\emph on
+.
 \end_layout
 
 \begin_layout Enumerate
-Ver el detalle de una carta buscada: Realizar una búsqueda.
- Tanto en el modo lista, o bien en el modo grilla, sólo con seleccionar
- una carta es posible acceder a sus detalles.
- Si se realiza una búsqueda con un sólo resultado también se accede directamente
- a los detalles de la carta.
- Allí se muestra su imagen en tamaño completo y en buena calidad, formatos
- en los que es válida, valores de todos sus campos y al final se describen
+Ver el detalle de una carta buscada: Buscar por el término 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+macizo
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ como nombre.
+ Se mostrará la carta 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Barahai Macizo
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ con su imagen en tamaño completo y en buena calidad, formatos CdU y Eterno
+ en los que es válida y valores de todos sus campos y al final se describen
  las erratas, limitaciones y prohibiciones de la carta.
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Descripción de habilidades con palabra clave: Tocar sobre 
+Errata: Buscar la carta de nombre 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Elixir de Saviaesencia
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Al final de la descripción de la carta se verá detallada la errata que
+ posee.
+\end_layout
+
+\begin_layout Itemize
+Limitación: Buscar la carta de nombre 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Estatua viviente
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Cerca del final de la descripción de la carta se verá detallado que está
+ limitada en CdU.
+\end_layout
+
+\begin_layout Itemize
+Prohibición: Buscar la carta de nombre 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Hadouken, sede nacional 2013
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Al final de la descripción de la carta se verá que está prohibida (
+\begin_inset Quotes eld
+\end_inset
+
+baneada
+\begin_inset Quotes erd
+\end_inset
+
+) en todos los formatos.
+\end_layout
+
+\begin_layout Itemize
+Descripción de habilidades con palabra clave: Buscar la carta de nombre
+ 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Azzam, jefe del desierto
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ En su descripción tocar sobre 
+\emph on
+Furia
+\emph default
+ o 
 \emph on
 Vínculo
 \emph default
- para acceder a su descripción.
+ para acceder a sus descripciones.
 \end_layout
 
 \begin_layout Itemize
@@ -3878,8 +4159,20 @@ realidad
 \end_deeper
 \begin_layout Enumerate
 Compartir una carta en las redes sociales o aplicaciones de mensajería configura
-das en el dispositivo: Ir a la vista de detalle de carta y seleccionar la
- opción 
+das en el dispositivo: Buscar la carta de nombre 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Azzam, jefe del desierto
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ En la vista de detalle de carta seleccionar la opción 
 \emph on
 Compartir
 \emph default
@@ -3927,6 +4220,11 @@ Fuertes
 \end_inset
 
 .
+ La lista de nombre 
+\emph on
+Fuertes
+\emph default
+ aparece listada en pantalla.
 \end_layout
 
 \begin_layout Enumerate
@@ -3954,6 +4252,7 @@ Agregar a lista
 Fuertes
 \emph default
 .
+ La carta es agregada a la lista y se muestra un mensaje notificándolo.
 \end_layout
 
 \begin_layout Enumerate
@@ -4079,6 +4378,7 @@ Araña gigante
 Ok
 \emph default
 .
+ La cantidad ahora se mostrará como 4.
  Para eliminar la carta, desde el diálogo elegir 
 \emph on
 Eliminar
@@ -4096,6 +4396,8 @@ Eliminar
 Ok
 \emph default
 .
+ La carta es eliminada del listado y volveremos a la vista de las cartas
+ de la lista.
 \end_layout
 
 \begin_layout Enumerate
@@ -4117,6 +4419,7 @@ X
 Fuertes
 \emph default
  y confirmar el diálogo.
+ La lista es eliminada y desaparece de la pantalla.
 \end_layout
 
 \begin_layout Enumerate
@@ -4185,7 +4488,7 @@ Zustatek, guardián del bosque
 \emph on
 Mazo
 \emph default
- se detallará que es válido en los formatos 
+ se detalla que es válido en los formatos 
 \emph on
 CdU
 \emph default
