@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.peltashield.inferno"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1400
+        versionName "0.14.0"
+    }
+    buildTypes {
+        debug {
+            debuggable true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.readystatesoftware.sqliteasset:sqliteassethelper:2.0.1'
+    compile 'com.google.android.gms:play-services-ads:8.4.0'
+    compile 'com.google.android.gms:play-services-analytics:8.4.0'
+    compile project(':google-play-apk-expansion-zip_file')
+    compile project(':google-play-apk-expansion-downloader_library')
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.github.satyan:sugar:1.4'
+}

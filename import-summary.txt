@@ -1,0 +1,108 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From downloader_library:
+* project.properties~
+From play_licensing:
+* LICENSE.txt
+* README.txt
+* library/
+* library/AndroidManifest.xml
+* library/aidl/
+* library/aidl/ILicenseResultListener.aidl
+* library/aidl/ILicensingService.aidl
+* library/project.properties
+* library/src/
+* library/src/com/
+* library/src/com/google/
+* library/src/com/google/android/
+* library/src/com/google/android/vending/
+* library/src/com/google/android/vending/licensing/
+* library/src/com/google/android/vending/licensing/AESObfuscator.java
+* library/src/com/google/android/vending/licensing/APKExpansionPolicy.java
+* library/src/com/google/android/vending/licensing/DeviceLimiter.java
+* library/src/com/google/android/vending/licensing/ILicenseResultListener.java
+* library/src/com/google/android/vending/licensing/ILicensingService.java
+* library/src/com/google/android/vending/licensing/LicenseChecker.java
+* library/src/com/google/android/vending/licensing/LicenseCheckerCallback.java
+* library/src/com/google/android/vending/licensing/LicenseValidator.java
+* library/src/com/google/android/vending/licensing/NullDeviceLimiter.java
+* library/src/com/google/android/vending/licensing/Obfuscator.java
+* library/src/com/google/android/vending/licensing/Policy.java
+* library/src/com/google/android/vending/licensing/PreferenceObfuscator.java
+* library/src/com/google/android/vending/licensing/ResponseData.java
+* library/src/com/google/android/vending/licensing/ServerManagedPolicy.java
+* library/src/com/google/android/vending/licensing/StrictPolicy.java
+* library/src/com/google/android/vending/licensing/ValidationException.java
+* library/src/com/google/android/vending/licensing/util/
+* library/src/com/google/android/vending/licensing/util/Base64.java
+* library/src/com/google/android/vending/licensing/util/Base64DecoderException.java
+* sample/
+* sample/AndroidManifest.xml
+* sample/project.properties
+* sample/res/
+* sample/res/drawable/
+* sample/res/drawable/icon.png
+* sample/res/layout/
+* sample/res/layout/main.xml
+* sample/res/values/
+* sample/res/values/strings.xml
+* sample/src/
+* sample/src/com/
+* sample/src/com/example/
+* sample/src/com/example/android/
+* sample/src/com/example/android/market/
+* sample/src/com/example/android/market/licensing/
+* sample/src/com/example/android/market/licensing/MainActivity.java
+* source.properties
+* test/
+* test/AndroidManifest.xml
+* test/project.properties
+* test/res/
+* test/res/drawable/
+* test/res/drawable/icon.png
+* test/res/layout/
+* test/res/layout/main.xml
+* test/res/values/
+* test/res/values/strings.xml
+* test/runTests.sh
+* test/src/
+* test/src/com/
+* test/src/com/android/
+* test/src/com/android/vending/
+* test/src/com/android/vending/licensing/
+* test/src/com/android/vending/licensing/AESObfuscatorTest.java
+* test/src/com/android/vending/licensing/APKExpansionPolicyTest.java
+* test/src/com/android/vending/licensing/ObfuscatedPreferencesTest.java
+* test/src/com/android/vending/licensing/ServerManagedPolicyTest.java
+* test/src/com/android/vending/licensing/StrictPolicyTest.java
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => google-play-apk-expansion-downloader_library/src/main/AndroidManifest.xml
+* res/ => google-play-apk-expansion-downloader_library/src/main/res/
+* src/ => google-play-apk-expansion-downloader_library/src/main/java/
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)
