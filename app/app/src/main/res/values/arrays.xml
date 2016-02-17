@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="search_types">
+        <item>@string/action_basic_search</item>
+        <item>@string/action_extended_search</item>
+        <item>@string/action_advanced_search</item>
+    </string-array>
+
+    <string-array name="logicals">
+        <item>y</item>
+        <item>o</item>
+        <item>no</item>
+    </string-array>
+
+    <string-array name="logicals_text">
+        <item>contiene</item>
+        <item>es</item>
+        <item>empieza con</item>
+    </string-array>
+
+    <string-array name="comparators">
+        <item>=</item>
+        <item>&gt;</item>
+        <item>&lt;</item>
+    </string-array>
+
+    <string-array name="cost_comp">
+        <item>Coste =</item>
+        <item>Coste &gt;</item>
+        <item>Coste &lt;</item>
+    </string-array>
+
+    <string-array name="str_comp">
+        <item>Fue =</item>
+        <item>Fue &gt;</item>
+        <item>Fue &lt;</item>
+    </string-array>
+
+    <string-array name="res_comp">
+        <item>Res =</item>
+        <item>Res &gt;</item>
+        <item>Res &lt;</item>
+    </string-array>
+
+    <string-array name="cost_values">
+        <item>@string/no_value</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>12</item>
+        <item>13</item>
+        <item>20</item>
+    </string-array>
+
+    <string-array name="str_values">
+        <item>@string/no_value</item>
+        <item>-3</item>
+        <item>-2</item>
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>20</item>
+    </string-array>
+
+    <string-array name="res_values">
+        <item>@string/no_value</item>
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>11</item>
+        <item>20</item>
+    </string-array>
+
+
+</resources>

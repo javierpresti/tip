@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/StandingNumber" />
+
+        <TextView
+            style="@style/Weighted"
+            android:textSize="@dimen/text_size_big"
+            android:textStyle="bold"
+            android:text="@string/standing_name" />
+
+        <TextView
+            style="@style/StandingNumber"
+            android:text="@string/standing_score" />
+
+        <TextView
+            style="@style/StandingNumber"
+            android:text="@string/standing_won" />
+
+        <TextView
+            style="@style/StandingNumber"
+            android:text="@string/standing_drew" />
+
+        <TextView
+            style="@style/StandingNumber"
+            android:text="@string/standing_lost" />
+
+        <TextView
+            style="@style/StandingNumber"
+            android:text="@string/standing_wins" />
+
+        <TextView
+            style="@style/StandingNumber"
+            android:text="@string/standing_looses" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

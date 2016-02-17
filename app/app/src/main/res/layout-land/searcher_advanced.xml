@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout style="@style/MatchAndWrap">
+
+        <View style="@style/Weighted.View" />
+
+        <CheckBox
+            android:id="@+id/caos_filter"
+            style="@style/PathFilter"
+            android:background="@drawable/sel_button_caos" />
+
+        <View style="@style/Weighted.View" />
+
+        <CheckBox
+            android:id="@+id/locura_filter"
+            style="@style/PathFilter"
+            android:background="@drawable/sel_button_locura" />
+
+        <View style="@style/Weighted.View" />
+
+        <CheckBox
+            android:id="@+id/muerte_filter"
+            style="@style/PathFilter"
+            android:background="@drawable/sel_button_muerte" />
+
+        <View style="@style/Weighted.View" />
+
+        <CheckBox
+            android:id="@+id/poder_filter"
+            style="@style/PathFilter"
+            android:background="@drawable/sel_button_poder" />
+
+        <View style="@style/Weighted.View" />
+
+        <CheckBox
+            android:id="@+id/neutral_filter"
+            style="@style/PathFilter"
+            android:background="@drawable/sel_button" />
+
+        <View style="@style/Weighted.View" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/MatchAndWrap">
+
+        <Spinner
+            android:id="@+id/fields"
+            android:paddingLeft="5dp"
+            style="@style/Wrap.MinHeight" />
+
+        <Spinner
+            android:id="@+id/logicals"
+            style="@style/Wrap.MinHeight" />
+
+        <Spinner
+            android:id="@+id/logicals_partners"
+            style="@style/Wrap.MinHeight" />
+
+        <Spinner
+            android:id="@+id/num_filter"
+            android:visibility="gone"
+            style="@style/Wrap.MinHeight" />
+
+        <CheckBox
+            android:id="@+id/x_values_filter"
+            style="@style/Wrap.WhiteAlphaBackground.CheckBox"
+            android:checked="true"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            android:text="@string/include_x" />
+
+        <Button
+            android:id="@+id/button_add_filter"
+            style="@style/Wrap"
+            android:text="@string/add_filter" />
+
+    </LinearLayout>
+
+    <AutoCompleteTextView
+        android:id="@+id/text_filter"
+        style="@style/Wrap.WhiteAlphaSquareBackground"
+        android:inputType="text"
+        android:imeOptions="flagNoExtractUi|actionDone"
+        android:selectAllOnFocus="true"
+        android:completionThreshold="2"
+        android:paddingTop="0.5pt"
+        android:paddingBottom="0.5pt"
+        android:layout_marginLeft="4dp"
+        android:dropDownWidth="match_parent"
+        android:visibility="gone"
+        android:hint="@string/name" />
+
+    <LinearLayout style="@style/MatchAndWrap">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Shadow"
+            android:text="@string/order_by"
+            android:paddingLeft="2dp"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_gravity="center_vertical"/>
+
+        <Spinner
+            android:id="@+id/fields_order"
+            style="@style/Wrap.MinHeight" />
+
+        <Spinner
+            android:id="@+id/order_direction"
+            style="@style/Wrap.MinHeight" />
+
+        <TextView
+            android:id="@+id/view_as_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Shadow"
+            android:text="@string/view_as"
+            android:paddingLeft="2dp"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_gravity="center_vertical"/>
+
+        <Spinner
+            android:id="@+id/view_as"
+            style="@style/Wrap.MinHeight"
+            />
+
+        <Button
+            android:id="@+id/button_search"
+            style="@style/Wrap"
+            android:text="@string/button_search" />
+
+    </LinearLayout>
+
+    <ScrollView style="@style/MatchAndWrap"
+        android:id="@+id/scrollV">
+        <!-- CustomLinearLayout -->
+    </ScrollView>
+
+</LinearLayout>

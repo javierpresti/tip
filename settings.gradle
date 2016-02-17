@@ -1,5 +1,0 @@
-include ':app'
-include ':google-play-licensing'
-include ':google-play-apk-expansion-zip_file'
-include ':play_licensing'
-include ':google-play-apk-expansion-downloader_library'

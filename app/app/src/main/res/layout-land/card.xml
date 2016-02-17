@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <com.peltashield.inferno.utils.ScalingImageView
+        android:id="@android:id/icon1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/card_detail_image"
+        android:scaleType="fitStart"
+        android:adjustViewBounds="true"
+        android:src="@drawable/zt_back" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@android:id/icon1"
+        android:layout_toEndOf="@android:id/icon1"
+        android:layout_marginLeft="6dp"
+        android:layout_marginStart="6dp" >
+
+        <LinearLayout
+            style="@style/MatchAndWrap"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/MatchAndWrap">
+
+                <LinearLayout
+                    style="@style/Weighted"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/name_view"
+                        style="@style/Subtitle"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_size_title" />
+
+                    <LinearLayout style="@style/MatchAndWrap">
+
+                        <ImageView
+                            android:id="@+id/path_view"
+                            style="@style/Wrap"
+                            android:scaleType="center"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginEnd="10dp"/>
+
+                        <TextView
+                            android:id="@+id/type_view"
+                            style="@style/Subtitle" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cost_view"
+                    style="@style/DetailNumber"
+                    android:textColor="@android:color/darker_gray" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/text_view"
+                style="@style/MatchAndWrap"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@android:color/white" />
+
+            <LinearLayout style="@style/MatchAndWrap">
+
+                <LinearLayout
+                    style="@style/Weighted"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/legend_view"
+                        style="@style/MatchAndWrap"
+                        android:gravity="center"
+                        android:textSize="@dimen/text_size_small"
+                        android:textColor="@android:color/white"
+                        android:textStyle="italic"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="7dp" />
+
+                    <TextView
+                        android:id="@+id/formats_view"
+                        style="@style/Subtitle"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <TextView
+                        android:id="@+id/edition_view"
+                        style="@style/MatchAndWrap"
+                        android:gravity="center"
+                        android:paddingTop="3pt"
+                        android:paddingBottom="3pt"
+                        android:textSize="@dimen/text_size_normal"
+                        android:lineSpacingExtra="5pt"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/artist_view"
+                        style="@style/Subtitle"
+                        android:textSize="@dimen/text_size_small" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Wrap"
+                    android:orientation="vertical"
+                    android:gravity="end">
+
+                    <TextView
+                        android:id="@+id/str_view"
+                        style="@style/DetailNumber"
+                        android:textSize="36sp"
+                        android:textColor="@android:color/holo_red_light" />
+
+                    <TextView
+                        android:id="@+id/res_view"
+                        style="@style/DetailNumber"
+                        android:textSize="36sp"
+                        android:textColor="@android:color/holo_blue_light" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/additionals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

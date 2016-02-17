@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="4dp"
+    android:paddingBottom="2dp">
+
+    <TextView
+        android:id="@+id/card_qty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_big"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        />
+
+    <ImageView
+        tools:ignore="ContentDescription"
+        android:id="@+id/card_image"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@id/card_qty"
+        android:layout_alignParentTop="true" />
+
+    <ImageView
+        android:id="@+id/card_path"
+        android:layout_height="25sp"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/card_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/card_path"
+        android:layout_alignTop="@id/card_path"
+        android:layout_alignBottom="@id/card_path"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_big"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/card_edition_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/card_image"
+        android:layout_marginLeft="4sp"
+        android:textStyle="bold"
+        android:layout_below="@id/card_path"
+        android:textSize="@dimen/text_size_mini"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/card_res"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toLeftOf="@id/card_edition_code"
+        android:layout_alignTop="@id/card_edition_code"
+        android:layout_alignBottom="@id/card_image"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_big"
+        android:gravity="center"
+        android:layout_marginLeft="2sp"
+        android:textColor="@android:color/holo_blue_light" />
+
+    <TextView
+        android:id="@+id/card_str"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toLeftOf="@id/card_res"
+        android:layout_alignTop="@id/card_res"
+        android:layout_alignBottom="@id/card_res"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_big"
+        android:gravity="center"
+        android:textColor="@android:color/holo_red_light" />
+
+    <TextView
+        android:id="@+id/card_name"
+        android:minHeight="25sp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/card_image"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/card_cost"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:gravity="center_vertical"
+        />
+
+    <TextView
+        android:id="@+id/card_type"
+        android:minHeight="25sp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/card_image"
+        android:layout_below="@+id/card_name"
+        android:layout_toLeftOf="@id/card_str"
+        android:textColor="@android:color/white"
+        android:gravity="center_vertical"
+        />
+
+</RelativeLayout>

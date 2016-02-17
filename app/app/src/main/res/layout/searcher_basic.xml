@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout style="@style/LinearGainFocus">
+
+            <AutoCompleteTextView
+                android:id="@+id/name_filter"
+                style="@style/Wrap.WhiteAlphaSquareBackground"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="5dp"
+                android:dropDownWidth="match_parent"
+                android:hint="@string/action_name_and_text"
+                android:imeOptions="flagNoExtractUi|actionDone"
+                android:inputType="text"
+                android:paddingBottom="0.5pt"
+                android:paddingTop="0.5pt"
+                android:selectAllOnFocus="true" />
+
+            <LinearLayout style="@style/MatchAndWrap">
+
+                <View style="@style/Weighted.View" />
+
+                <CheckBox
+                    android:id="@+id/caos_filter"
+                    style="@style/PathFilter"
+                    android:background="@drawable/sel_button_caos" />
+
+                <View style="@style/Weighted.View" />
+
+                <CheckBox
+                    android:id="@+id/locura_filter"
+                    style="@style/PathFilter"
+                    android:background="@drawable/sel_button_locura" />
+
+                <View style="@style/Weighted.View" />
+
+                <CheckBox
+                    android:id="@+id/muerte_filter"
+                    style="@style/PathFilter"
+                    android:background="@drawable/sel_button_muerte" />
+
+                <View style="@style/Weighted.View" />
+
+                <CheckBox
+                    android:id="@+id/poder_filter"
+                    style="@style/PathFilter"
+                    android:background="@drawable/sel_button_poder" />
+
+                <View style="@style/Weighted.View" />
+
+                <CheckBox
+                    android:id="@+id/neutral_filter"
+                    style="@style/PathFilter"
+                    android:background="@drawable/sel_button" />
+
+                <View style="@style/Weighted.View" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/MatchAndWrap">
+
+                <Spinner
+                    android:id="@+id/formats"
+                    style="@style/Wrap.MinHeight" />
+
+                <Spinner
+                    android:id="@+id/types"
+                    style="@style/Wrap.MinHeight" />
+
+                <LinearLayout
+                    style="@style/MatchAndWrap"
+                    android:gravity="end">
+
+                    <Button
+                        android:id="@+id/button_search"
+                        style="@style/Wrap"
+                        android:layout_gravity="right"
+                        android:text="@string/button_search" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
