@@ -1,0 +1,4503 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 1
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Desarrollo de aplicación mobile de INFERNO®
+\end_layout
+
+\begin_layout Standard
+\align center
+UNIVERSIDAD NACIONAL DE QUILMES
+\begin_inset Newline newline
+\end_inset
+
+Departamento de Ciencia y Tecnología
+\begin_inset Newline newline
+\end_inset
+
+Tecnicatura Universitaria en Programación Informática
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+\align center
+Trabajo de Inserción Profesional
+\end_layout
+
+\begin_layout Standard
+\align center
+Javier Presti
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing other 5
+\align center
+Director: Leonardo Gassman, Ing.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introducción
+\end_layout
+
+\begin_layout Standard
+INFERNO® es un juego nacional de cartas coleccionables (CCG).
+ En los CCG's un jugador debe comprar cartas y combinarlas para armar su
+ propio mazo que competirá contra el de otros jugadores.
+ La elección de cartas a utilizar en un mazo es la que define la estrategia
+ y la forma de jugar con el mismo.
+ Este tipo de juego se renueva constantemente ya que nuevas cartas se van
+ creando comúnmente a través de expansiones o ediciones, que son paquetes
+ que extienden al juego actual.
+ Las cartas se consiguen oficialmente a través de mazos pre-armados o de
+ sobres con contenido aleatorio.
+ Los mismos están disponibles en comiquerías o a través de distribuidores
+ particulares.
+\end_layout
+
+\begin_layout Standard
+El CCG nació con Magic the Gathering® en el año 1993 y que es desde entonces
+ popular.
+ Si bien en un comienzo sólo existía como un juego físico, en los últimos
+ años el género se benefició de un auge con el advenimiento de una gran
+ cantidad juegos digitales
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://playfab.com/blog/the-numbers-behind-the-rise-of-collectible-card-
+ games [Consulta: 14 febrero 2016]
+\end_layout
+
+\end_inset
+
+, muchos de ellos pensados para smartphones.
+ Actualmente el mayor exponente de esta movida digital es Hearthstone, que
+ ya cuenta con más de 40 millones de jugadores registrados
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://www.gamespot.com/articles/hearthstone-reaches-40-million-players-up-10-mill
+i/1100-6432063 [Consulta: 14 febrero 2016]
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El juego INFERNO fue creado en Mendoza por la empresa argentina OMG! entretenimi
+ento que comercializa su producto a todo el país y organiza -entre otras
+ cosas- eventos provinciales y nacionales del juego.
+ Cuenta en la actualidad con más de 1000 cartas diferentes distribuidas
+ entre 8 ediciones y con más planeadas para lanzar este año.
+ Este juego se distribuye, al menos por el momento, exclusivamente de manera
+ física.
+ Una herramienta digital para ver y administrar los elementos del juego
+ (cartas, mazos) abriría las puertas a que el producto nacional crezca en
+ popularidad e incentive más a los actuales jugadores.
+\end_layout
+
+\begin_layout Standard
+Un CCG tiene dos grandes partes importantes: la creación del mazo y su uso
+ (o sea, la acción de 
+\begin_inset Quotes eld
+\end_inset
+
+jugar
+\begin_inset Quotes erd
+\end_inset
+
+).
+ Para crear un mazo, se deben buscar cartas potencialmente útiles para él.
+ Esto es un trabajo que requiere cierto tiempo, y es aquí donde un software
+ de búsqueda se vuelve muy práctico.
+ Con los filtros adecuados, se pueden armar mazos más fácil y rápidamente
+ y también se pueden descubrir estrategias que finalmente otorguen una posición
+ más favorable para el juego.
+ Asimismo, el poder ir almacenando y guardando mazos y listas de cartas
+ de manera digital le permite al jugador tener una mayor organización y
+ control de sus posibilidades de juego.
+ Crear listas que luego, en muchos casos, se transforman a mazos para jugar
+ es el paso natural que viene luego de la búsqueda de cartas y antes de
+ la compra física de las mismas.
+\end_layout
+
+\begin_layout Standard
+Con respecto a las plataformas utilizadas para el desarrollo de software,
+ hoy en día se está dando mucho en el ámbito mobile ya que las personas
+ usan cada vez más el teléfono y menos la PC.
+ A su vez, Android es el sistema operativo más utilizado en teléfonos móviles
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://gs.statcounter.com/#mobile_os-ww-monthly-201601-201601-bar [Consulta:
+ 14 febrero 2016]
+\end_layout
+
+\end_inset
+
+, y más aún en Argentina, donde tiene más del 80% de cuota entre smartphones
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://gs.statcounter.com/#mobile_os-AR-monthly-201601-201601-bar [Consulta:
+ 14 febrero 2016]
+\end_layout
+
+\end_inset
+
+.
+ Por esta razón es que Android es una fuerte elección al realizar una aplicación
+ que complemente un juego de cartas en Argentina.
+\end_layout
+
+\begin_layout Standard
+Este informe presenta el Trabajo de Inserción Profesional que da fin a la
+ carrera de Técnico Universitario en Programación Informática.
+ Teniendo el consentimiento del dueño, y dados los puntos anteriormente
+ expuestos, se realizó una aplicación del juego INFERNO para la plataforma
+ Android.
+ El objetivo del software es la búsqueda de cartas y la creación de listas
+ y mazos.
+
+\series bold
+ La finalidad del mismo es ser una demostración para obtener financiamiento
+\series default
+ para desarrollar una aplicación completa del juego, o proyectos similares
+ sobre otros CCGs.
+ Se detallará las partes de trabajo, el alcance del mismo, su diseño, arquitectu
+ra y las herramientas utilizadas, haciendo énfasis en las particularidades
+ técnicas y dificultades encontradas y en cómo se las solucionó.
+ El documento finalizará con las conclusiones obtenidas de este trabajo.
+\end_layout
+
+\begin_layout Section
+Dominio
+\end_layout
+
+\begin_layout Standard
+INFERNO es un juego de cartas coleccionables en donde un jugador arma un
+ mazo de cartas para jugar contra el mazo de otros.
+ El tipo de juego puede considerarse de estrategia, ya que requiere de mucho
+ planeamiento para seleccionar las cartas y luego usarlas en el juego.
+\end_layout
+
+\begin_layout Standard
+En una partida se enfrentan comúnmente 2 jugadores, cada uno con su propio
+ mazo.
+ Al comenzar mezclan sus mazos, toman 5 cartas y comienzan con el primer
+ turno.
+ Al comienzo del turno de cada jugador, él toma una carta y pone la siguiente
+ del tope de su mazo boca abajo en la mesa.
+ Las cartas boca abajo se utilizan como recurso, es decir para pagar el
+ coste de las cartas.
+ El jugador durante su turno juega cartas de su mano y/o habilidades de
+ cartas en juego (como atacar) hasta que decide terminarlo, comenzando el
+ turno del siguiente jugador.
+ Atacar a un jugador es sacarle cartas del mazo.
+ Cuando un jugador no tiene más cartas en el mazo y debe sacar una, pierde.
+\end_layout
+
+\begin_layout Standard
+A continuación se presentarán los conceptos más relevantes de INFERNO.
+\end_layout
+
+\begin_layout Subsection
+Carta
+\end_layout
+
+\begin_layout Standard
+Elemento principal del juego.
+ Cada carta posee características únicas que la diferencian de las demás.
+ En INFERNO pertenecen a una senda -representada como su reino de origen-
+ y se dividen en diferentes tipos, donde cada uno cumple un rol diferente
+ dentro del juego (por ejemplo, una carta de tipo 
+\begin_inset Quotes eld
+\end_inset
+
+Arma
+\begin_inset Quotes erd
+\end_inset
+
+ es aquella que se equipa en otra de tipo 
+\begin_inset Quotes eld
+\end_inset
+
+Aliado
+\begin_inset Quotes erd
+\end_inset
+
+).
+ En general se dice que no hay mejores o peores cartas, sino que son diferentes.
+ Sin embargo, se suele decir que una es más 
+\begin_inset Quotes eld
+\end_inset
+
+útil
+\begin_inset Quotes erd
+\end_inset
+
+ que otra.
+ Es decir, que es más probable que un jugador querrá incluirla en un mazo.
+ Para ver los campos que contiene, ver anexo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Campos"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Edición
+\end_layout
+
+\begin_layout Standard
+El juego periódicamente (aproximadamente cada 6 meses) lanza una nueva edición
+ con unas 90 a 180 cartas.
+ Éstas se ponen a la venta en sobres cerrados (llamados 
+\begin_inset Quotes eld
+\end_inset
+
+boosters
+\begin_inset Quotes erd
+\end_inset
+
+) que contienen cartas de diferentes rarezas con contenido aleatorio.
+ En algunas ocasiones también se venden mazos pre-armados, es decir, con
+ contenido establecido y de público conocimiento.
+ En general las últimas 2 ediciones son las que se consideran 
+\begin_inset Quotes eld
+\end_inset
+
+en curso
+\begin_inset Quotes erd
+\end_inset
+
+ y que pueden ser conseguidas en un local de venta.
+ Es decir, la edición que se encuentra en producción y el remanente de la
+ anterior.
+ Cartas de ediciones más antiguas en general se consiguen solamente de manera
+ individual y no en boosters.
+\end_layout
+
+\begin_layout Subsection
+Mazo
+\end_layout
+
+\begin_layout Standard
+Conjunto de cartas que pertenece a al menos un formato en particular y por
+ lo tanto puede ser jugado en él.
+ Crear un mazo es armar una estrategia de juego.
+ Cada jugador posee el suyo con el que enfrentará al de otro jugador del
+ mismo formato.
+ Se buscan cartas que entre ellas se complementen o potencien y se define
+ la manera de jugar.
+ Las reglas de creación de mazo están definidas por los formatos.
+ Un jugador comúnmente tiene más de un mazo armado y listo para jugar.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Formatos"
+
+\end_inset
+
+Formato
+\end_layout
+
+\begin_layout Standard
+Define con qué cartas se puede armar el mazo, principalmente con qué ediciones.
+ También puede establecer restricciones con el uso de alguna carta en particular.
+ Algunos formatos a su vez modifican las reglas de armado de mazo, permitiendo
+ por ejemplo la inclusión de 2 sendas.
+\end_layout
+
+\begin_layout Standard
+En los formatos comúnmente utilizados un mazo debe contener una sola carta
+ especial de tipo Demonio y 50 cartas más que solamente pueden ser de la
+ misma senda que el Demonio y neutrales.
+ A su vez, entre esas 50 cartas no puede haber más de 4 copias de una misma.
+\end_layout
+
+\begin_layout Standard
+A continuación se detallan los formatos con los que se juega actualmente:
+\end_layout
+
+\begin_layout Description
+Base El más utilizado por los jugadores.
+ Permite el uso de las últimas ediciones únicamente.
+ En este momento comprende a las últimas 4 que son Descenso, Encuentro,
+ Abismo y Origen.
+\end_layout
+
+\begin_layout Description
+Eterno Comprende todas las ediciones.
+ Se encuentran prohibidas las cartas de ediciones promocionales, es decir
+ ediciones que en general contienen una sola carta y que se lanzan para
+ promover algún evento.
+\end_layout
+
+\begin_layout Description
+VaP
+\begin_inset space ~
+\end_inset
+
+(Viaje
+\begin_inset space ~
+\end_inset
+
+a
+\begin_inset space ~
+\end_inset
+
+las
+\begin_inset space ~
+\end_inset
+
+Profundidades) Conformado por las ediciones Descenso, Encuentro y Abismo.
+\end_layout
+
+\begin_layout Description
+CdU
+\begin_inset space ~
+\end_inset
+
+(Crónicas
+\begin_inset space ~
+\end_inset
+
+de
+\begin_inset space ~
+\end_inset
+
+Ubanna) Comprende las ediciones Insania, Conquista y Destino.
+ Se encuentran limitadas las cartas Ascenso de Narghot y Estatua Viviente.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Erratas/limitaciones/prohibiciones"
+
+\end_inset
+
+Erratas, limitaciones y prohibiciones
+\end_layout
+
+\begin_layout Standard
+A veces las cartas sufren actualizaciones en sus valores.
+ Esto es conocido como errata.
+ Se publican oficialmente y deberían ser conocidas por los jugadores.
+ Prácticamente siempre al generarse la errata, la carta ya ha sido impresa
+ en su totalidad y por lo tanto todas las copias de la misma presentan el
+ valor modificado desactualizado.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Reimpresiones"
+
+\end_inset
+
+Reimpresiones
+\end_layout
+
+\begin_layout Standard
+Al salir una nueva edición es posible que algunas de las cartas que la conforman
+ hayan pertenecido también a ediciones anteriores.
+ A esto se le llama reimpresión.
+ Al ser reimpresa una carta puede variar en su ilustración (y por ende su
+ artista), su rareza y es posible que el texto de la carta sufra actualizaciones
+ como una nueva redacción o inclusión de errata.
+ Ver figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "figura-reimpresion"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/carta_reimpresa1.jpg
+	height 6cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/carta_reimpresa2.jpg
+	height 6cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Carta reimpresa
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "figura-reimpresion"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Habilidades-especiales"
+
+\end_inset
+
+Habilidades con palabras clave
+\end_layout
+
+\begin_layout Standard
+Algunas habilidades de las cartas son tan comunes que se les pone un nombre.
+ Cuando se hace, en un comienzo se lo muestra en la carta junto con la descripci
+ón de la habilidad pero en ediciones posteriores aparece sólo el nombre,
+ funcionando éste como término clave.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Ficha"
+
+\end_inset
+
+Ficha
+\end_layout
+
+\begin_layout Standard
+Su único propósito es la de representar un elemento dentro del juego.
+ Si bien una ficha se representa en una carta, técnicamente no lo es a los
+ fines de crear un mazo y por tanto no puede ser incluida en él.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Cartas-con-doble-cara"
+
+\end_inset
+
+Cartas con doble cara
+\end_layout
+
+\begin_layout Standard
+Las cartas de tipo Demonio poseen valores en sus 2 caras y pueden ser volteadas
+ durante el juego.
+ Este es el único tipo de carta con esta característica y no es mezclada
+ en el mazo.
+\end_layout
+
+\begin_layout Section
+Modo de trabajo
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "iteraciones"
+
+\end_inset
+
+La creación de la aplicación se dividió en iteraciones incrementales.
+ En total tomó 4 iteraciones en donde la segunda se extendió una semana
+ adicional debido a las complejidades que se encontraron a la hora de realizarla.
+ A pesar de esto se pudo cumplir satisfactoriamente con las iteraciones
+ planificadas debido a la fuerte carga horaria que se ha podido asignar
+ como ya estaba previsto.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "tests_no"
+
+\end_inset
+
+El objetivo del presente trabajo es presentar una demo de cara a obtener
+ futura financiación.
+ Entonces, el desarrollo se centró en proveer pocas funcionalidades pero
+ que sean completas y tengan un alto atractivo visual y de usabilidad.
+ Es por esto que no estaba planeada la realización de tests automáticos
+ para la presente aplicación, ya que los mismos requieren de horas de programaci
+ón y no sirven para garantizar los aspectos visuales y de usabilidad que
+ busca esta demo.
+ Por lo tanto se decidió utilizar un mecanismo manual de testeo.
+ Se consideró -al ser una demo- importante que el producto se vea bien y
+ que sea muy práctico para su uso así como que sea completo.
+\end_layout
+
+\begin_layout Standard
+Las iteraciones involucradas se detallan a continuación:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Iteración
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Duración
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Objetivo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2 semanas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Carga de datos y visualización de cartas
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3 semanas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Buscadores de cartas
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2 semanas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Listas de cartas y validación de mazos
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3 semanas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Puesta en producción e informe
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Alcance
+\end_layout
+
+\begin_layout Standard
+Los diferentes casos de uso se pueden detallar dentro de 2 grandes categorías
+ que son la búsqueda de cartas y la creación de listas.
+ Las indicaciones para probarlos está dadas en el anexo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Prueba-de-casos"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Búsqueda de cartas
+\end_layout
+
+\begin_layout Standard
+Para una explicación de los detalles de una carta ver anexo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Campos"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Poder buscar una carta según:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Nombre
+\end_layout
+
+\begin_layout Itemize
+Texto que contiene
+\end_layout
+
+\begin_layout Itemize
+Senda a la que pertenece
+\end_layout
+
+\begin_layout Itemize
+Tipo de carta
+\end_layout
+
+\begin_layout Itemize
+Edición a la que pertenece
+\end_layout
+
+\begin_layout Itemize
+Rareza
+\end_layout
+
+\begin_layout Itemize
+Valores numéricos de Coste/Fuerza/Resistencia
+\end_layout
+
+\begin_layout Itemize
+Artista de la imagen
+\end_layout
+
+\begin_layout Itemize
+Formato en el que es válida
+\end_layout
+
+\begin_layout Itemize
+Habilidades con palabras clave
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Incluir o excluir las cartas de tipo ficha de la búsqueda
+\end_layout
+
+\begin_layout Enumerate
+Listar el resultado de la búsqueda:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Listado sencillo (con las imágenes de las cartas)
+\end_layout
+
+\begin_layout Itemize
+Listado con descripción detallada
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Aplicar criterios de orden a los resultados según los campos de las cartas
+\end_layout
+
+\begin_layout Enumerate
+Ver el detalle de una carta buscada:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Imagen en tamaño completo y en buena calidad
+\end_layout
+
+\begin_layout Itemize
+Datos completos de la carta
+\end_layout
+
+\begin_layout Itemize
+Ediciones en las que fue impresa (detallando la rareza que posee en cada
+ una) y la visualización de las mismas
+\end_layout
+
+\begin_layout Itemize
+Formatos en los que es válida
+\end_layout
+
+\begin_layout Itemize
+Descripción de habilidades con palabra clave
+\end_layout
+
+\begin_layout Itemize
+Cambios en la carta (erratas, limitaciones y prohibiciones)
+\end_layout
+
+\begin_layout Itemize
+Visualización de ambas partes de la carta donde aplique
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "sub:Cartas-con-doble-cara"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Compartir una carta en las redes sociales o aplicaciones de mensajería configura
+das en el dispositivo
+\end_layout
+
+\begin_layout Subsection
+Listas de cartas
+\end_layout
+
+\begin_layout Enumerate
+Crear lista
+\end_layout
+
+\begin_layout Enumerate
+Agregar carta a lista
+\end_layout
+
+\begin_layout Enumerate
+Ver detalle de cartas, con cantidad de cada una y total
+\end_layout
+
+\begin_layout Enumerate
+Editar o eliminar cantidad de una carta
+\end_layout
+
+\begin_layout Enumerate
+Eliminar lista
+\end_layout
+
+\begin_layout Enumerate
+Dada una lista, saber si cumple con las condiciones para ser mazo y en qué
+ formatos lo es
+\end_layout
+
+\begin_layout Section
+Diseño de software
+\end_layout
+
+\begin_layout Subsection
+Arquitectura
+\end_layout
+
+\begin_layout Standard
+Se utiliza un Activity que es el encargado de ir cargando los diferentes
+ Fragments.
+ Un Activity en Android tiene un concepto similar al de ventana o marco
+ en el que la aplicación funciona.
+ Puede contener Fragments que suelen ser contenedores de componentes que
+ también poseen comportamiento.
+\end_layout
+
+\begin_layout Standard
+En esta aplicación todas las pantallas que el usuario ve son fragments que
+ van siendo reemplazados a excepción de la vista de una carta, que es otro
+ Activity.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename arq_searchers.png
+	width 12cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama simplificado de los diferentes estados en la búsqueda de una carta
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Carga de datos
+\end_layout
+
+\begin_layout Standard
+Se decidió crear 2 planillas de cálculo con las diferentes características
+ de las cartas.
+ Por 
+\begin_inset Quotes eld
+\end_inset
+
+carta
+\begin_inset Quotes erd
+\end_inset
+
+ se entiende a aquella que tiene nombre diferente a otra, con excepción
+ de las cartas tipo ficha que se las diferencia por los valores de sus campos.
+ Es decir, si una carta fue impresa en más de una edición, para el programa
+ sigue tratándose de la misma carta (ver 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Reimpresiones"
+
+\end_inset
+
+).
+ Esto fue una decisión de diseño.
+\end_layout
+
+\begin_layout Standard
+Ya que al ser reimpresa en una edición diferente hay valores de la carta
+ que son o pueden ser diferentes (edición, rareza, artista) se decidió crear
+ una planilla para los datos inmutables de una carta y otra donde se detallan
+ aquellos campos que pueden variar.
+ La información de las planillas se vuelcan a una base de datos embebida
+ en la aplicación.
+ Al momento de consultar por los datos se realizarán los join correspondientes
+ de las tablas.
+\end_layout
+
+\begin_layout Standard
+Se decidió otorgarle un id a cada carta, edición e instancia de carta, que
+ es la conjunción de los anteriores 2 ids.
+ El primero (al que llamaremos 
+\begin_inset Quotes eld
+\end_inset
+
+id interno
+\begin_inset Quotes erd
+\end_inset
+
+) es un número de 4 dígitos incremental comenzando en 1001 y el segundo
+ contiene 3 dígitos comenzando por el 101.
+ El id de una carta en la tabla termina siendo la concatenación de los dos
+ primeros, identificándose por ejemplo la primer carta con el 1001101.
+ Si bien se pudo haber usado números como 
+\begin_inset Quotes eld
+\end_inset
+
+0001
+\begin_inset Quotes erd
+\end_inset
+
+, al momento de guardarlo en una tabla y manejarlo habría que tener precauciones
+ extras ya que se almacenaría simplemente como un 1.
+ Forzando a que los primeros ids tengan 4 y 3 dígitos se asegura que una
+ carta esté identificada con un número de 7 dígitos y que siempre sean diferente
+s.
+\end_layout
+
+\begin_layout Standard
+Al utilizar este id de 7 dígitos las cartas mantienen su orden cronológico
+ al quedarse ordenadas primero por su id interno y luego por su edición.
+ Por ejemplo: la edición con id 114 reedita la carta con id 1002 que sólo
+ había sido editada en la edición con id 101.
+ La reedición tendrá entonces el id 1002114, número que se encuentra entre
+ 1002101 (la carta reeditada) y 1003101 (la siguiente carta de la edición
+ 101).
+ Ver tabla 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tabla-ids"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+id
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+id interno
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+id edición
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1001101
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1001
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+101
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1002101
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1002
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+101
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1002114
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1002
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+114
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1003101
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1003
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+101
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Primeros ids de las cartas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tabla-ids"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con respecto a las imágenes de las cartas, se las quiso nombrar de alguna
+ manera que identifique su contenido, es decir que contenga la edición y
+ el número de carta.
+ Dado que el id de una carta de 7 dígitos mencionado anteriormente posee
+ esta información, se lo puede incluir en el nombre de la imagen.
+ La ventaja de esto es que podemos vincular a una carta directamente con
+ su imagen, sin necesidad de consultar por un campo que contenga el nombre
+ con el que se haya guardado.
+\end_layout
+
+\begin_layout Standard
+Por las razones mencionadas anteriormente es que se decidió utilizar este
+ identificador de carta como el id de los registros de la tabla.
+ Es importante destacar que entonces los ids no son consecutivos, pero sí
+ incrementales.
+\end_layout
+
+\begin_layout Standard
+Se creó un campo para guardar el tipo completo de una carta y otro más por
+ cada subcategoría (ver Tipos en 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Campos"
+
+\end_inset
+
+).
+ Esto favorece la posterior tarea de mostrar datos y de búsqueda respectivamente.
+ Otros campos que se 
+\begin_inset Quotes eld
+\end_inset
+
+dividieron
+\begin_inset Quotes erd
+\end_inset
+
+ por estos mismos motivos fueron los de coste, fuerza, resistencia, nombre,
+ texto, leyenda y habilidad.
+ Las razones se explican en la sección 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Iteración-Buscadores"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Múltiples dispositivos
+\end_layout
+
+\begin_layout Standard
+Se planteó preparar la aplicación para su correcta visualización en múltiples
+ dispositivos.
+ Esto involucra tanto proveer diferentes resoluciones de los iconos como
+ realizar diferentes diseños de pantalla.
+ Las resoluciones provistas para todos los iconos corresponden a dispositivos
+ con densidad de pantalla desde los 160 a los 480 dpi aproximadamente.
+\end_layout
+
+\begin_layout Standard
+Todos los textos de la aplicación se guardan como recurso en el archivo
+ strings.xml, de manera de posibilitar una fácil localización a futuro.
+\end_layout
+
+\begin_layout Subsection
+Visualización
+\end_layout
+
+\begin_layout Standard
+Con respecto a los diseños de pantalla, se crearon diferentes layouts para
+ las vistas portrait (uso vertical típico en smartphones) y landscape (orientaci
+ón horizontal común en tablets).
+ Específicamente se organizaron los elementos de la pantalla de diferente
+ manera según la orientación (ver figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "carta_vista"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Para realizar una fácil carga de imágenes se nombró a cada una con las letras
+ 
+\begin_inset Quotes eld
+\end_inset
+
+zf
+\begin_inset Quotes erd
+\end_inset
+
+ seguidas del id de la carta.
+ Entonces, la carta con id 1005101 tendrá la imagen asociada zf1005101.jpg.
+ Si la imagen es del reverso (ver 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Cartas-con-doble-cara"
+
+\end_inset
+
+) se le agrega una 
+\begin_inset Quotes eld
+\end_inset
+
+r
+\begin_inset Quotes erd
+\end_inset
+
+ al final (por ejemplo, zf1005101r.jpg).
+ De esta manera dado un id es sencillo obtener el nombre de la imagen asociada
+ sin necesidad de realizar ninguna consulta a la base de datos.
+\end_layout
+
+\begin_layout Standard
+Al mostrar una carta, lo más importante y lo que más impacta visualmente
+ es su imagen.
+ Sin embargo, en pantallas con tamaño reducido puede ser incómodo leer las
+ cartas, y el diseño de las mismas no siempre ayuda.
+ En parte por esto es que se consideró importante también detallar en texto
+ los campos de la carta.
+ El propósito de incluirlos es el de proveer fácil lectura de los mismos.
+ Teniendo esto en mente es que se decidió utilizar un color negro sólido
+ de fondo y usar letras blancas de un tamaño generoso.
+ En la vista vertical se decidió que la imagen ocupase toda la pantalla
+ y los textos debajo y en la vista horizontal lado a lado (ver figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "carta_vista"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/carta_vista1.png
+	height 5.25cm
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename images/carta_vista2.png
+	height 5.25cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/carta_vista3.png
+	width 5.25cm
+	BoundingBox 0bp 0bp 427bp 240bp
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Vista vertical y horizontal de una carta
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "carta_vista"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como se vio anteriormente, una carta puede pertenecer a múltiples ediciones.
+ En vez de mostrarse cada una por separado (como si fuesen diferentes cartas)
+ se decidió dentro de la vista de carta detallar y proveer accesos a las
+ otras ediciones en las que se haya impreso.
+ Por un lado se evitan resultados duplicados al realizar búsquedas y por
+ el otro se enriquece la información proveída de una carta.
+\end_layout
+
+\begin_layout Standard
+Hay cartas que poseen también imagen al dorso.
+ Mostrar ambas imágenes a la vez ocuparía un gran espacio y por eso se decidió
+ que al tocar una imagen con reverso, ésta lo muestre.
+\end_layout
+
+\begin_layout Standard
+Para aquellas habilidades con palabra clave se crean atajos que nos conducirán
+ a su descripción.
+ Esto es práctico ya que comúnmente no se leen estas descripciones porque
+ los jugadores ya reconocen los términos clave pero en caso de necesitarse
+ están al fácil alcance.
+ A su vez, los nombres de las sendas son reemplazados por sus iconos, así
+ como aparecen en las cartas.
+ Ver ejemplo en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "carta-detalles"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/detalles_carta1.png
+	height 6cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/detalles_carta2.png
+	height 6cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Detalles de una carta
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "carta-detalles"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Inferno cuenta en la actualidad con 20 habilidades con término clave y se
+ van sumando con cada nueva edición.
+ Éstas pueden estar incluidas en el campo texto de una carta y al encontrarse
+ uno de ellos mientras se está viendo el contenido de una carta, es necesario
+ incluir su definición.
+ Para encontrarlas eficientemente el campo texto se guarda codificado en
+ la base de datos.
+ Es decir, se incorporan ciertos símbolos que serán leídos para decodificar
+ su contenido y que serán eliminados al mostrarse en la vista.
+ Por ejemplo, en vez de guardar en la base de datos dentro del campo texto
+ el término clave 
+\begin_inset Quotes eld
+\end_inset
+
+Furia
+\begin_inset Quotes erd
+\end_inset
+
+ se lo persiste como 
+\begin_inset Quotes eld
+\end_inset
+
+#Furia#
+\begin_inset Quotes erd
+\end_inset
+
+.
+ De esta manera el programa intentará encontrar el carácter 
+\begin_inset Quotes eld
+\end_inset
+
+#
+\begin_inset Quotes erd
+\end_inset
+
+ en busca de palabras clave y una vez encontrado se realizará una búsqueda
+ del término exacto que se encuentra entre los símbolos especiales.
+ Se realiza de esta manera en vez de consultar en la tabla por las habilidades
+ con término clave ya que no sólo es necesario buscarlas, sino ver también
+ en qué parte del texto se encuentran, y persistir esto puede generar problemas
+ ya que los textos de las cartas pueden variar al ser reeditadas.
+ 
+\end_layout
+
+\begin_layout Standard
+El mismo procedimiento de buscar un símbolo especial en el texto se sigue
+ para encontrar los términos de las sendas que serán cambiados por su imagen.
+\end_layout
+
+\begin_layout Subsection
+Tipos de buscadores
+\end_layout
+
+\begin_layout Standard
+Se decidió dividir las búsquedas en 3 instancias diferentes de buscadores
+ que las llamamos básica, extendida y avanzada (ver figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "buscadores_tipos"
+
+\end_inset
+
+).
+ La razón de esto fue no sobrecargar la pantalla con opciones que el usuario
+ no necesita.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Básico
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Extendido
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Avanzado
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/buscador_basico.png
+	height 6cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/buscador_extendido.png
+	height 6cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/buscador_avanzado.png
+	height 6cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tipos de buscadores
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "buscadores_tipos"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Al abrirse la aplicación en el buscador, aquí es donde se puso el mayor
+ esfuerzo en lo visual y la usabilidad.
+ Ésta es la puerta de entrada y con lo que los usuarios más van a interactuar,
+ de ahí su importancia.
+ Con respecto a componentes gráficos, se incluyó una imagen de fondo con
+ la ilustración de alguna carta al azar y para generar el mayor impacto
+ se notó que lo mejor era no modificarla agregándole transparencia y retocar
+ en cambio los demás elementos de la pantalla.
+ Finalmente se optó por hacer éstos con fondo blanco con cierta transparencia.
+ Ver comparaciones en figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fondo_transparencias"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sin imagen
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+con transparencia
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sin transparencia
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/fondo1.png
+	height 6cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/fondo2.png
+	height 6cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/fondo3.png
+	height 6cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparativa de imágenes de fondo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fondo_transparencias"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El buscador básico es el que se abre por defecto.
+ Se considera que en general con unos pocos campos el usuario estará satisfecho
+ y no es necesario sobrecargar la pantalla de tantos elementos.
+ Con las opciones más importantes la aplicación se ve más elegante y destaca
+ más la imagen de fondo, dándole un mayor atractivo visual.
+ En este buscador se excluyen de los resultados las fichas ya que difícilmente
+ un usuario esté interesado en ellas.
+\end_layout
+
+\begin_layout Standard
+El buscador extendido se utiliza para poder realizar una búsqueda pudiendo
+ utilizar prácticamente todos los campos, a excepción de algunos muy puntuales
+ (artista y leyenda) por los que difícilmente el usuario quiera buscar.
+ Estos campos sólo están disponibles en el último tipo de búsqueda.
+\end_layout
+
+\begin_layout Standard
+El buscador avanzado está pensado para realizar búsquedas muy puntuales.
+ Este último es el más potente pero también el más complicado de usar, siendo
+ la idea ir agregando condiciones a través de premisas y/o/no, teniendo
+ una estructura similar a la que terminará siendo la consulta a realizar.
+ Primero se selecciona un campo y el tipo de condición (y/o/no), y luego
+ el valor a buscar.
+ En aquellos campos en donde se introduce texto (nombre, texto, artista,
+ leyenda) se agrega la posibilidad de realizar una búsqueda parcial (si
+ contiene), total (texto exacto) o si comienza con el término ingresado.
+ Una vez introducidos todos los datos necesarios de un filtro, se selecciona
+ la opción para agregarlo y se agrega al listado de filtros de la parte
+ inferior de la pantalla.
+ Esta lista es posible editarla eliminando alguno de sus elementos.
+\end_layout
+
+\begin_layout Subsection
+Listado
+\end_layout
+
+\begin_layout Standard
+Se tendrán dos tipos diferentes de listado: grilla y lista.
+ La primera mostrará las imágenes de las cartas y la segunda un resumen
+ de las mismas con sus datos más relevantes, entre ellos su ilustración.
+ Se pensó en tener los artes guardados de manera separada para no tener
+ que andar recortando las imágenes mientras se mostraban los detalles de
+ las cartas.
+ Sin embargo, esto duplicaría la cantidad de imágenes y con ellas el peso
+ de la aplicación se vería muy afectado.
+ Es por eso, y tras comprobar que el recorte funciona muy eficientemente,
+ que se decidió no guardar por separado las ilustraciones.
+ El buscador básico mostrará el listado en lista y los demás darán la opción
+ para elegir el tipo de listado.
+\end_layout
+
+\begin_layout Subsection
+Creación de una lista
+\end_layout
+
+\begin_layout Standard
+Primero se crea y después se agregan elementos desde la vista de carta.
+ Al elegir una lista nos muestra el detalle de las cartas con su cantidad
+ y al seleccionar una vemos todos sus detalles y podemos editar la cantidad.
+ Mientras que se ve el detalle de carta por carta es útil ir viendo cuántas
+ de ellas se encuentran en la lista.
+ Para esto en el Action Bar se decidió crear un botón para cambiar la cantidad
+ o eliminar la carta que se muestra actualmente y el icono de este botón
+ es la representación numérica de la cantidad actual que se encuentran en
+ la lista.
+ Es decir, cada vez que se cambia la carta que se está viendo, cambia a
+ su vez el icono de este botón.
+\end_layout
+
+\begin_layout Section
+Implementación
+\end_layout
+
+\begin_layout Subsection
+Iteración 1: Carga de datos y Visualización de cartas
+\end_layout
+
+\begin_layout Standard
+Antes de poder realizar búsquedas de cartas, es necesario tener la base
+ de datos cargada.
+ Esto implica no sólo crear una base de datos e introducirle datos, sino
+ persistirla y luego ver modos de acceso a la misma.
+\end_layout
+
+\begin_layout Standard
+El segundo paso que se realizó fue poder ver los datos de una carta.
+\end_layout
+
+\begin_layout Subsubsection
+Carga de datos
+\end_layout
+
+\begin_layout Standard
+Las tablas se crearon desde planillas de cálculo y se guardaron en una base
+ de datos SQLite
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://www.sqlite.org [Consulta: 15 febrero 2016]
+\end_layout
+
+\end_inset
+
+ dentro de la aplicación.
+ Esto se realizó utilizando el software Sqliteman
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+ttp://sqliteman.yarpen.cz [Consulta: 14 febrero 2016]
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para mejorar la velocidad de las consultas se crearon algunos índices con
+ los campos nombre, senda, formato, tipo básico, edición, rareza e id interno.
+ Éstos cubren la gran mayoría de las consultas que se vayan a realizar por
+ los usuarios.
+ El uso de índices haría más lentas las operaciones de update e insert,
+ pero éstas no son utilizadas.
+\end_layout
+
+\begin_layout Subsubsection
+Manipulación de imágenes
+\end_layout
+
+\begin_layout Standard
+Se obtuvieron todas las imágenes de las cartas y se las renombró con el
+ software pyRenamer
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://launchpad.net/pyrenamer [Consulta: 14 febrero 2016]
+\end_layout
+
+\end_inset
+
+.
+ Al ser ligeramente de diferentes dimensiones las imágenes, se las cortó
+ utilizando ImageMagick
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://www.imagemagick.org [Consulta: 14 febrero 2016]
+\end_layout
+
+\end_inset
+
+ para que todas sean iguales y así facilitar su manipulación.
+\end_layout
+
+\begin_layout Standard
+Un problema que se tuvo fue que se contaba con 1313 imágenes de cartas que
+ totalizaban 165,5MB.
+ Esto presentaba 2 inconvenientes: por un lado, cada carta pesaba en promedio
+ 129KB (lo cual es bastante si se desea mostrar muchas y de manera bien
+ fluida) y el total de ellas hacía que la aplicación pesase mucho.
+ Cabe destacar que el alojar las imágenes en un servicio externo no era
+ una opción ya que el desarrollo de la aplicación siempre se tuvo en cuenta
+ para que sea completamente offline.
+ La solución fue reducir la calidad de las imágenes, pero a través de medios
+ que garanticen gran reducción sin que el usuario pueda notar mucha diferencia.
+ Primero, con ImageMacick se disminuyó la calidad de las imágenes un 25%
+ y con lo resultante se utilizó un algoritmo de compresión sin pérdida con
+ Trimage
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://trimage.org [Consulta: 14 febrero 2016]
+\end_layout
+
+\end_inset
+
+.
+ El resultado fue pasar de un total de 165,5MB a 62,7MB, con un promedio
+ que bajó de 129KB a 48,9KB por imagen y prácticamente con la misma calidad
+ a la vista (ver ejemplo en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "figura-resize"
+
+\end_inset
+
+).
+ El disminuir la calidad fue lo que produjo los mayores resultados (165,5MB
+ a 93,4MB, baja de 44%), pero la compresión resultó ser altamente eficaz
+ igualmente (93,4MB a 62,7MB, baja de 33%).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/carta_modificada1.jpg
+	height 8.75cm
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename images/carta_modificada2.jpg
+	height 8.75cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Imagen de 252KB (izq) pasada a 49,4KB (der)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "figura-resize"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Visualización-de-cartas"
+
+\end_inset
+
+Visualización de cartas
+\end_layout
+
+\begin_layout Standard
+La parte más importante es mostrar la imagen de la carta.
+ Dado un id, se busca en la aplicación la imagen correspondiente.
+ Para detallar sus campos de información se realiza una consulta nuevamente
+ utilizando el id.
+ Ya que el id de la carta es el mismo que se utiliza en el del registro
+ de las tablas, esta búsqueda es sumamente rápida.
+ Una vez obtenidos los datos se los vuelca la vista.
+\end_layout
+
+\begin_layout Standard
+Se hace una lectura del texto de la carta en búsqueda de palabras clave
+ de habilidades.
+ La búsqueda se realiza de forma eficiente y a través del SpannableString
+ que nos provee Android se crean los 
+\begin_inset Quotes eld
+\end_inset
+
+links
+\begin_inset Quotes erd
+\end_inset
+
+ de las habilidades con sus descripciones.
+ De la misma forma también se modifican ciertos términos por sus imágenes
+ respectivas (como las sendas de las cartas).
+\end_layout
+
+\begin_layout Standard
+Se detalla aquellas ediciones en las que la carta se encuentra, y tocando
+ en ellas se cambia la imagen y demás campos (rareza, artista) de la carta
+ para mostrar la edición seleccionada.
+ Para saber si una carta posee más de una edición se buscan sus campos por
+ su id interno (el de 4 dígitos), obteniéndose un registro por cada edición
+ de la carta.
+\end_layout
+
+\begin_layout Standard
+En donde aplique, tocando la vista de imagen se cambia la misma por su reverso.
+ Dado el id de una carta se deduce el nombre de la imagen del reverso.
+\end_layout
+
+\begin_layout Subsubsection
+Compartir imagen
+\end_layout
+
+\begin_layout Standard
+Se creó un Navigation Drawer (panel lateral deslizable) para acceder a la
+ opción de compartir imagen.
+ Esta funcionalidad es posible crearla usando intents implícitos.
+ En Android un intent es una descripción de una operación a ser realizada.
+ Puede ser explícito, en donde se hace referencia a la clase que debe ser
+ ejecutada o puede ser implícito, en donde en cambio se provee suficiente
+ información en el intent para que el sistema en tiempo de ejecución determine
+ qué ejecutar.
+ En el caso de compartir imagen, en el intent se especifica que la acción
+ a realizar es la de enviar datos y de tipo imagen jpg.
+ Con esta información sumado a la ubicación del recurso (la imagen a enviar)
+ con Android es todo lo que se necesita para poder compartir la imagen.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Iteración-Buscadores"
+
+\end_inset
+
+Iteración 2: Buscadores de cartas
+\end_layout
+
+\begin_layout Standard
+Para realizar las búsquedas se creó un Builder con estado conversacional
+ de la consulta.
+ Se usa entonces un objeto de la clase CardsDB que va construyendo la query
+ en base a los métodos que recibe y con ella finalmente realiza la consulta
+ al enviarle el mensaje correspondiente.
+ Por cada filtro que se desea agregar a la búsqueda se le envía un mensaje.
+\end_layout
+
+\begin_layout Standard
+Hay algunas medidas que se tomaron para hacer las búsquedas más sencillas
+ y eficientes.
+\end_layout
+
+\begin_layout Standard
+Se puede realizar una búsqueda por alguna habilidad con palabra clave.
+ Para esto se aprovechó la codificación de las habilidades explicada en
+ el punto 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Visualización-de-cartas"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Es posible consultar por un texto en particular, ya sea la habilidad de
+ la carta (lo que está escrito en la caja de texto) o leyenda como el nombre
+ de la misma o del artista.
+ Buscar textos presenta una dificultad adicional, y sobre todo si se trata
+ del idioma español.
+ Se debe tener en cuenta las diferencias entre mayúsculas y minúsculas y
+ especial cuidado con los tildes.
+ Es decir, escribiendo el término 
+\begin_inset Quotes eld
+\end_inset
+
+solo
+\begin_inset Quotes erd
+\end_inset
+
+ uno esperaría obtener resultados que contengan por ejemplo 
+\begin_inset Quotes eld
+\end_inset
+
+Sólo
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Si simplemente eliminamos los acentos del texto a buscar, también deberíamos
+ eliminar los acentos de los datos de la base de datos para poder realizar
+ la búsqueda, lo cual sería muy ineficiente (más aún cuando varios de estos
+ campos en los buscadores poseen auto-completado y se realizan múltiples
+ consultas a la base).
+ Para lidiar con este problema por cada campo por el que se busca por texto
+ en las tablas se creó un campo adicional con el texto 
+\begin_inset Quotes eld
+\end_inset
+
+crudo
+\begin_inset Quotes erd
+\end_inset
+
+, es decir sin acentos y todo en letras minúsculas.
+ De esta manera se eliminan los acentos del texto a buscar, se pasa a minúsculas
+ y la consulta se realiza sobre este campo crudo.
+ Así es como se elimina el problema de los acentos y aparte se puede hacer
+ una búsqueda case-sensitive en la base de datos.
+\end_layout
+
+\begin_layout Standard
+Una cuestión similar a la anterior pasa con los valores 
+\begin_inset Quotes eld
+\end_inset
+
+numéricos
+\begin_inset Quotes erd
+\end_inset
+
+ de los campos coste, fuerza y resistencia, y es que no son siempre exactamente
+ numéricos sino que pueden contener el valor X (ver figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "figura_valoresx"
+
+\end_inset
+
+).
+ Esto presentó un problema ya que habría que guardar los valores 
+\begin_inset Quotes eld
+\end_inset
+
+numéricos
+\begin_inset Quotes erd
+\end_inset
+
+ como texto y tratarlos de esa manera, lo que dificultaría tareas como ordenarlo
+s o contarlos.
+ Esto también se solucionó con la misma idea de tener un campo crudo para
+ realizar consultas que tenga solamente el valor numérico sin tomar en cuenta
+ si posee o no X.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/carta_valorx1.jpg
+	height 6cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/carta_valorx2.jpg
+	height 6cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cartas con valores X
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "figura_valoresx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se crearon 3 tipos diferentes de búsquedas según la necesidad del usuario.
+\end_layout
+
+\begin_layout Subsubsection
+Buscador básico
+\end_layout
+
+\begin_layout Standard
+En el campo de texto se utilizó AutoCompleteTextView para proveer sugerencias
+ de auto-completado.
+ Se realizan queries por nombre de carta a la base de datos mientras se
+ está escribiendo y se muestran los posibles resultados.
+ No se mejoró la performance de esto ya que funciona de manera muy fluida.
+ De haberse querido mejorar se hubiera guardado dentro de la aplicación
+ la lista de los nombres de las cartas, y se buscaría en ella en vez de
+ estar accediendo a la base de datos por cada letra que ingresa el usuario.
+\end_layout
+
+\begin_layout Standard
+Los 
+\begin_inset Quotes eld
+\end_inset
+
+botones
+\begin_inset Quotes erd
+\end_inset
+
+ de las sendas son CheckBoxes que cambian su imagen según su estado (tildado
+ o no).
+\end_layout
+
+\begin_layout Subsubsection
+Buscador extendido
+\end_layout
+
+\begin_layout Standard
+La mayor dificultad para este buscador fue crear Spinners con opciones múltiples.
+ Cuando se trabaja con componentes personalizados en muchos casos hay que
+ saber manejar su ciclo de vida correctamente.
+ En este caso en particular queremos que se guarde su estado al ser reconstruido
+ (por ejemplo ante el giro de la pantalla).
+ Para esto se creó un objeto que hereda de BaseSavedState que fue utilizado
+ en el onSaveInstanceState y el onRestoreInstanceState del Spinner, es decir
+ en aquellos métodos que se llaman al guardarse y recuperarse el estado
+ de un View.
+\end_layout
+
+\begin_layout Standard
+En este buscador y el avanzado se agrega la posibilidad de ordenar las cartas
+ y elegir el tipo de listado.
+ La elección de este último se persiste para que quede como opción por defecto.
+ Es decir, cada vez que se selecciona una opción se guarda en SharedPreferences,
+ que es un map que cada aplicación de Android tiene pensado para ser utilizado
+ como opciones de configuración del usuario.
+\end_layout
+
+\begin_layout Subsubsection
+Buscador avanzado
+\end_layout
+
+\begin_layout Standard
+Lo interesante de este buscador es que posee una estructura sencilla con
+ pocas opciones a la vista, y las mismas van apareciendo y desapareciendo
+ según los elementos seleccionados.
+ En la parte inferior de la pantalla se van detallando los filtros que se
+ van agregando y también se tuvo que tener cuidado de mantener su estado.
+ Para hacer esto último se creó un layout que guarde filtros y mantenga
+ su estado con un BaseSavedState, utilizándolo de la misma manera que con
+ los Spinners con opciones múltiples.
+ Luego desde la vista cada vez que se restaura se le solicitan los filtros
+ al layout y de esta manera se agregan los elementos a la lista.
+ Esta lista básicamente detalla aquellos filtros que han sido agregados,
+ siendo posible la eliminación de alguno a elección.
+\end_layout
+
+\begin_layout Subsection
+Iteración 3: Listas de cartas y validación de mazos
+\end_layout
+
+\begin_layout Standard
+El trabajo de la iteración se dividió en listar cartas y en crear listas.
+\end_layout
+
+\begin_layout Subsubsection
+Listado de cartas
+\end_layout
+
+\begin_layout Standard
+Se comenzó realizando una GridView (lista en grilla) mostrando las imágenes
+ de las cartas.
+ La manipulación de imágenes en Android no es trivial y más aún cuando se
+ desea mostrar tantas juntas.
+ Las tareas que son pesadas como carga de imágenes se hacen en un thread
+ aparte para no limitar la capacidad del thread principal que es el que
+ muestra la vista.
+ Así es como por ejemplo en un comienzo se cargó la imagen de fondo en los
+ buscadores.
+ Pero en este caso se trata de muchas imágenes que el usuario querrá ver
+ de manera fluida.
+ Para conseguir esto se decidió usar una librería externa, se probó Picasso
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://square.github.io/picasso [Consulta: 14 febrero 2016]
+\end_layout
+
+\end_inset
+
+ y Universal Image Loader
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://github.com/nostra13/Android-Universal-Image-Loader [Consulta: 14
+ febrero 2016]
+\end_layout
+
+\end_inset
+
+.
+ Se utilizó la segunda por su mayor capacidad de configuración y performance
+ que demostró en la aplicación.
+ Esta librería junto a la reducción del peso de las imágenes resultó en
+ un scroll fluido por las imágenes.
+\end_layout
+
+\begin_layout Standard
+Luego se implementó la vista de cartas con un ListView, en donde se muestra
+ el dibujo de la carta y sus datos más relevantes.
+ Nuevamente se utilizó la librería de carga de imágenes.
+ Para obtener el arte de una carta se realiza un corte de la imagen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GridView
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ListView
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/lista_listview.png
+	height 6cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/lista_gridview.png
+	height 6cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Listado de cartas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Creación y validación de listas
+\end_layout
+
+\begin_layout Standard
+Ante cada cambio en una lista se la pasa por un algoritmo para validarla
+ y decir si es un mazo y en qué formatos se puede utilizar.
+ Se realiza por descarte, comenzando con todos los formatos y de ellos viendo
+ carta por carta a cuáles pertenece, eliminando los que no hasta terminar
+ la lista o quedarse sin formatos para seguir revisando (es decir, en donde
+ la lista no presenta ningún formato válido).
+\end_layout
+
+\begin_layout Standard
+Se utilizó Sugar ORM
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://square.github.io/picasso [Consulta: 14 febrero 2016]
+\end_layout
+
+\end_inset
+
+ para guardar y acceder a las listas creadas.
+ Se decidió utilizar esta librería por su facilidad de uso.
+ Para persistir los objetos de una clase simplemente se puede extender de
+ SugarRecord y esto automáticamente generará una tabla para la clase con
+ un campo por cada atributo de instancia.
+ Los objetos de la clase heredan los métodos save, delete, getId y setId
+ para manejarlos en la base de datos y la clase cuenta con métodos estáticos
+ para realizar consultas dado una cláusula where o con métodos prácticos
+ como findById o listAll, que devuelve todas las instancias persistidas
+ de la clase.
+\end_layout
+
+\begin_layout Standard
+Un problema de Sugar ORM es que no puede persistir relaciones uno a muchos,
+ y un mazo contiene cartas.
+ Para resolver esto se decidió no persistir el atributo 
+\begin_inset Quotes eld
+\end_inset
+
+cartas
+\begin_inset Quotes erd
+\end_inset
+
+ (agregándole la annotation Ignore) y en cambio persistir un nuevo atributo
+ de tipo String que sea el JSON del primero.
+ Entonces se sobreescribió el método save para que antes de guardar asigne
+ en el nuevo atributo el valor JSON del atributo cartas.
+ Para transformar un objeto (en este caso una colección) fácilmente a JSON
+ se utilizó la librería Google Gson
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://github.com/google/gson [Consulta: 14 febrero 2016]
+\end_layout
+
+\end_inset
+
+.
+ También se modificó el getter del atributo 
+\begin_inset Quotes eld
+\end_inset
+
+cartas
+\begin_inset Quotes erd
+\end_inset
+
+ para que, si es null, antes de devolver el valor se asigne al atributo
+ la colección obtenida desde el JSON.
+ Esto último también se realiza con Gson.
+\end_layout
+
+\begin_layout Subsection
+Iteración 4: Puesta en producción e informe
+\end_layout
+
+\begin_layout Standard
+Esta iteración incluyó aquellas tareas que se realizaron para poner a la
+ aplicación en producción.
+\end_layout
+
+\begin_layout Standard
+Primero se decidió agregar banners publicitarios en la parte inferior de
+ la pantalla utilizando AdMob
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://developers.google.com/admob [Consulta: 14 febrero 2016]
+\end_layout
+
+\end_inset
+
+, el cual está perfectamente integrado con Android.
+ Para esto hay que registrarse en el servicio y una vez hecho esto se solicitan
+ códigos para poder mostrar las publicidades.
+ Simplemente en la vista se debe incluir al banner y desde la implementación
+ añadirle un código y cargarlo.
+ Google se encarga de, según datos como el lenguaje del dispositivo y el
+ país en el que se encuentra, cargar publicidad pertinente en el banner
+ que hemos incluido.
+\end_layout
+
+\begin_layout Standard
+Finalmente se subió la aplicación a Google Play Store.
+ Para ello hubo que registrarse como desarrollador ante Google (pagando
+ la cuota única de 25 dólares).
+ Un problema interesante que se tuvo con respecto a esto fue al realizar
+ la descripción del programa, asignarle un icono y subirlo.
+ Al tener la aplicación lista, fue suspendida y se envió una advertencia
+ al desarrollador.
+ La única razón que se brindó por email fue 
+\begin_inset Quotes eld
+\end_inset
+
+violación de cláusula de Robo de identidad o comportamiento engañoso
+\begin_inset Quotes erd
+\end_inset
+
+ sin hacer referencia a qué parte de esta cláusula se había violado.
+ Se dedujo que habría sido por incluir como logotipo de la aplicación el
+ mismo que el del juego.
+ Recibir una advertencia no es algo menor, ya que persisten en el tiempo
+ y al acumular 3 se da de baja al usuario desarrollador, y con él se pierde
+ el control sobre las aplicaciones que se hayan publicado.
+ Es decir, no se pueden actualizar más, ya no se podrán recibir ingresos
+ por ellas y los usuarios no se enterarán de esto y seguirán utilizándola.
+ Sin embargo, es posible apelar por única vez a una suspensión de aplicación
+ y eso es lo que se hizo, mostrando pruebas de que se tienen los derechos
+ para utilizar la imagen del juego.
+ Una vez concedida la apelación se canceló la advertencia que se había recibido.
+\end_layout
+
+\begin_layout Section
+Trabajo futuro
+\end_layout
+
+\begin_layout Standard
+El desarrollo de la aplicación deja mucho lugar para trabajo futuro.
+ Se puede agregar la posibilidad de comprar una carta o lista de cartas,
+ y que el usuario reciba el producto en su domicilio o en la tienda más
+ cercana.
+ De esta manera, la aplicación no sólo le servirá al jugador para planificar
+ su juego, sino también para conseguir aquellas cartas que necesite.
+ Si la carta que busca es de una edición antigua, se podrá detallar aquellas
+ tiendas que la poseen, teniendo en cuenta que para esto se deberá desarrollar
+ alguna interfaz en donde las tiendas detallen sus stocks y éstas deberían
+ mantenerlo actualizado o sino responder on-demand por stock.
+\end_layout
+
+\begin_layout Standard
+También se puede agregar el compartir listas o mazos, por ejemplo exportándolo
+ a un formato de texto que se pueda imprimir o importar para verse dentro
+ de la aplicación.
+\end_layout
+
+\begin_layout Standard
+Otro gran trabajo futuro es la posibilidad de poder jugar con la aplicación.
+ Un jugador puede crear un mazo y jugar contra otro, por ejemplo con el
+ propósito de poner a prueba sus estrategias.
+ A esto luego se le podría agregar la posibilidad de jugar contra el programa,
+ desarrollando su inteligencia artificial.
+ El poder jugar puede desencadenar también en la creación de formatos o
+ ediciones sólo disponibles de manera digital.
+\end_layout
+
+\begin_layout Standard
+Ya que una aplicación es accesible desde cualquier parte del mundo, fácilmente
+ INFERNO puede extenderse hacia los demás países y también se puede trabajar
+ en la localización del programa y las cartas para poder disfrutarse del
+ juego en otros idiomas.
+\end_layout
+
+\begin_layout Section
+Conclusiones
+\end_layout
+
+\begin_layout Standard
+El desarrollo tuvo como finalidad ser una demostración, mostrando las posibilida
+des de desarrollo sin descuidar la usabilidad y la interfaz.
+ Es por esto que se empleó mucho esfuerzo y dedicación en crear un software
+ que sea amigable y eficiente para usar y que genere un alto atractivo visual.
+ Aún así, se pudo crear una aplicación completa que termina siendo de gran
+ utilidad para el propósito que se tuvo en mente, que es el de crear mazos
+ para el juego INFERNO.
+ A su vez deja las puertas abiertas a continuar con su desarrollo, y en
+ un futuro por ejemplo poder jugar a través de ella.
+\end_layout
+
+\begin_layout Standard
+Los principales inconvenientes se encontraron en la carga eficiente de imágenes,
+ persistencia de datos y en mantener el estado de las vistas personalizadas.
+ En los 2 primeros casos la solución vino, al menos en buena parte, en utilizar
+ librerías externas.
+ Si bien en un comienzo hay que decidir cuál utilizar, su aprendizaje nos
+ puede llevar un tiempo y nos podemos encontrar con algún bug, una vez superados
+ estos pasos la recompensa de utilizar una librería es muy grande, sobretodo
+ si se trata de realizar algo que seguro vamos a tener que volver a hacer
+ en el futuro.
+\end_layout
+
+\begin_layout Standard
+Con el objetivo en mente de ser una demostración se trabajó mucho en los
+ requisitos no funcionales, que básicamente involucraron eficiencia, usabilidad
+ y estética de la aplicación.
+ Si bien éstos no están muy ligados al hecho de programar, la habilidad
+ y el conocimiento necesario para poder satisfacerlos hacen a un mejor programad
+or y lo pueden diferenciar del resto.
+ Después de todo, crear una aplicación no es sólo programar, sino transmitir
+ una idea.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-2"
+
+\end_inset
+
+McWherter, J.
+ and Gowell, S.
+ Professional Mobile Application Develop- ment.
+ Indianapolis, Ind: John Wiley & Sons, Inc, 2012.
+ Print.
+ ISBN: 978-1118240687
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-3"
+
+\end_inset
+
+Lee, and Chaim Krause.
+ Beginning Android 4 application development.
+ Indianapolis, Ind: Wrox/John Wiley & Sons, 2012.
+ Print.
+ ISBN: 978- 1118199541
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-4"
+
+\end_inset
+
+Meier, Reto.
+ Professional Android 4 application development.
+ Indianapo- lis, IN: Wiley/Wrox, 2012.
+ Print.
+ ISBN: 978-1118102275
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-3"
+
+\end_inset
+
+http://developer.android.com/intl/es/guide/topics/data/data-storage.html [Consulta:
+ 14 febrero 2016]
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-4"
+
+\end_inset
+
+http://developer.android.com/intl/es/training/implementing-navigation/nav-drawer.ht
+ml [Consulta: 14 febrero 2016]
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-5"
+
+\end_inset
+
+https://www.sqlite.org/lang_createindex.html [Consulta: 14 febrero 2016]
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+https://www.sqlite.org/queryplanner.html [Consulta: 14 febrero 2016]
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Repositorio
+\begin_inset space ~
+\end_inset
+
+de
+\begin_inset space ~
+\end_inset
+
+la
+\begin_inset space ~
+\end_inset
+
+aplicación: https://github.com/presti/tip
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Web
+\begin_inset space ~
+\end_inset
+
+de
+\begin_inset space ~
+\end_inset
+
+INFERNO: http://www.inferno.com.ar [Consulta: 14 febrero 2016]
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\start_of_appendix
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Campos"
+
+\end_inset
+
+Campos de una carta
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/carta_campos.png
+	height 7cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Campos de una carta
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Nombre Diferencia a una carta de otra.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Senda Son cuatro y una Neutral.
+ Todas las cartas de un mazo deben ser de la misma senda que el Demonio,
+ y aquellas neutrales pueden incluirse en cualquier mazo.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Tipo Definen las reglas por las que se rige una carta y la forma en la que
+ puede ser utilizada.
+ Se divide en tipo básico, supertipo y subtipo.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Tipo
+\begin_inset space ~
+\end_inset
+
+básico Las cartas están principalmente definidas por su tipo básico.
+ Es él quien determina el cómo debe jugarse la carta y establece las reglamentac
+iones más fundamentales.
+ Todas las cartas pertenecen a al menos un tipo básico, siendo en casi todos
+ los casos a tan sólo uno.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Supertipo Establece reglas adicionales con respecto al uso de la carta.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Subtipo Palabra clave que define alguna cualidad de la carta pero que en
+ sí misma no se encuentra ligada a ninguna regla, sino que algunas cartas
+ tienen habilidades que interactúan con otras que tengan un subtipo en particula
+r.
+ Es posible tener más de un subtipo.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Texto Detalla las habilidades de una carta, que son características que
+ le permiten afectar al juego.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Edición Conjunto de cartas creadas o reimpresas.
+ Se venden por separado a través de mazos pre-armados o sobres y se imprimen
+ solamente las cartas pertenecientes a la última edición, pasando a ser
+ las anteriores más difíciles de conseguir.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Rareza Define la cantidad que serán impresas de la carta.
+ A mayor rareza, menor cantidad y por ende más difícil de conseguir.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Coste/Fuerza/Resistencia Valores numéricos que influyen en el juego.
+ Éste puede ser variable y especificarse con una X en la carta.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Ilustración Representación gráfica de la carta.
+ Su inclusión es puramente por atractivo visual y no modifica al juego.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Artista Nombre del artista de la ilustración.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Leyenda Texto de ambientación sin funcionalidad en el juego.
+ Le otorga un contexto a la carta.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Prueba-de-casos"
+
+\end_inset
+
+Prueba de casos de uso
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0col%
+width "50col%"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/play_store.png
+	width 5.3cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Inferno en Google Play Store
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Para instalar el programa, desde la aplicación Google Play Store del dispositivo
+ buscar el término 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+inferno peltashield
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ y seleccionar la aplicación de nombre 
+\emph on
+Inferno
+\emph default
+ con desarrollador 
+\emph on
+PeltaShield
+\emph default
+ que posee el logotipo como se muestra en la imagen a la derecha.
+ Al ingresar al detalle seleccionar 
+\emph on
+Instalar
+\emph default
+ y aceptar el diálogo que nos muestra.
+ Una vez terminada la instalación abrir la aplicación llamada 
+\emph on
+Inferno
+\emph default
+ identificada con el logotipo.
+\end_layout
+
+\begin_layout Standard
+En el anexo siguiente se presentan ejemplos concretos para probar la aplicación.
+\end_layout
+
+\begin_layout Subsection
+Búsqueda de cartas
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0col%
+width "50col%"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset label
+LatexCommand label
+name "cartas_a_buscar"
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename images/carta_a_buscar.jpg
+	height 7.5cm
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Carta a buscar
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Disponemos de tres instancias diferentes de buscadores que llamamos Básica,
+ Extendida y Avanzada.
+ Para acceder a la búsqueda básica, debemos dirigirnos al botón que se halla
+ en el derecho de la barra superior de la pantalla al inicio de la aplicación.
+ A la derecha del mismo, hallamos el icono de búsqueda extendida, y correlativo
+ a tal, encontramos el icono de búsqueda avanzada.
+\end_layout
+
+\begin_layout Standard
+Se buscará la carta de la derecha 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Dacal, regente de Trion
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Una vez seleccionados los filtros correspondientes, la búsqueda se realiza
+ tocando el botón 
+\begin_inset Quotes eld
+\end_inset
+
+Buscar
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En el buscador avanzado el término 
+\begin_inset Quotes eld
+\end_inset
+
+En el campo X seleccionar Y
+\begin_inset Quotes erd
+\end_inset
+
+ significa 
+\begin_inset Quotes eld
+\end_inset
+
+Seleccionar X del menú que se encuentra en el extremo izquierdo y luego
+ elegir Y del menú que se encuentra más a la derecha en la misma fila
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Recordar que en este buscador los filtros se agregan con el botón 
+\begin_inset Quotes eld
+\end_inset
+
+Agregar filtro
+\begin_inset Quotes erd
+\end_inset
+
+ y, a menos que se indique lo contrario, el campo y/o/no debe seleccionarse
+ como 
+\begin_inset Quotes eld
+\end_inset
+
+y
+\begin_inset Quotes erd
+\end_inset
+
+ u 
+\begin_inset Quotes eld
+\end_inset
+
+o
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Poder buscar una carta según campos:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Nombre: En la búsqueda básica, ingresar 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Dacal
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ en el cuadro de texto que se halla en el extremo superior izquierdo.
+ Con la búsqueda extendida, ingresar 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Dacal
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ en el cuadro de texto 
+\emph on
+Nombre
+\emph default
+.
+ En la búsqueda avanzada, seleccionar el campo 
+\emph on
+Nombre
+\emph default
+ e ingresar 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Dacal
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ en el cuadro de texto, dejando el menú en 
+\begin_inset Quotes eld
+\end_inset
+
+contiene
+\begin_inset Quotes erd
+\end_inset
+
+ o en 
+\begin_inset Quotes eld
+\end_inset
+
+empieza con
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Al buscar aparece el detalle de la carta buscada.
+\end_layout
+
+\begin_layout Itemize
+Texto: En la búsqueda básica, ingresar 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Reptil
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ en el cuadro de texto que se halla en el extremo superior izquierdo.
+ Con la búsqueda extendida, debemos ingresar 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Reptil
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ en el cuadro de texto llamado 
+\emph on
+Texto
+\emph default
+.
+ En la búsqueda avanzada, seleccionar el campo 
+\emph on
+Texto
+\emph default
+ e ingresar 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Reptil
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ en el cuadro de texto, dejando el menú en 
+\emph on
+contiene
+\emph default
+ o en 
+\emph on
+empieza con
+\emph default
+.
+ Al buscar aparece el detalle de la carta buscada.
+\end_layout
+
+\begin_layout Itemize
+Senda: Se puede filtrar desde cualquiera de los 3 buscadores.
+ En todos los casos, seleccionar el cuarto icono -el de color verde- que
+ se encuentra en la parte superior del buscador, cambiando su color de fondo
+ de gris a anaranjado.
+ Al realizar la búsqueda aparece el listado de cartas de la senda seleccionada
+ (199 cartas en el buscador básico y extendido, 203 en el avanzado) entre
+ las que se encuentra la carta buscada
+\emph on
+.
+\end_layout
+
+\begin_layout Itemize
+Tipo: En el buscador básico seleccionar 
+\emph on
+Aliado
+\emph default
+ en el menú 
+\emph on
+Tipo
+\emph default
+.
+ En el buscador extendido seleccionar 
+\emph on
+Aliado
+\emph default
+ en el menú 
+\emph on
+Tipo
+\emph default
+, 
+\emph on
+Único
+\emph default
+ en 
+\emph on
+Supertipo
+\emph default
+ y 
+\emph on
+Humano
+\emph default
+ en 
+\emph on
+Subtipo
+\emph default
+.
+ En el buscador avanzado seleccionar 
+\emph on
+Aliado
+\emph default
+ en el campo 
+\emph on
+Tipo básico
+\emph default
+, 
+\emph on
+Único
+\emph default
+ en 
+\emph on
+Supertipo
+\emph default
+ y 
+\emph on
+Humano
+\emph default
+ en 
+\emph on
+Subtipo
+\emph default
+.
+ Al realizar la búsqueda aparece el listado de cartas que poseen los tipos
+ seleccionados (435 cartas en el buscador básico, 16 en el extendido y avanzado)
+ entre las que se encuentra la carta buscada
+\emph on
+.
+\end_layout
+
+\begin_layout Itemize
+Edición: Desde el buscador extendido o avanzado, en el campo 
+\emph on
+Edición
+\emph default
+ seleccionar 
+\emph on
+Destino
+\emph default
+.
+ Al realizar la búsqueda aparece el listado de cartas de la edición 
+\emph on
+Destino
+\emph default
+ (128 cartas en el buscador extendido y 132 en el avanzado) entre las que
+ se encuentra la carta buscada
+\emph on
+.
+\end_layout
+
+\begin_layout Itemize
+Rareza: Desde el buscador extendido o avanzado, en el campo 
+\emph on
+Rareza
+\emph default
+ seleccionar 
+\emph on
+Épica
+\emph default
+.
+ Al realizar la búsqueda aparece el listado de las 76 cartas de la rareza
+ seleccionada entre las que se encuentra la carta buscada
+\emph on
+.
+\end_layout
+
+\begin_layout Itemize
+Habilidades con palabra clave: Desde el buscador extendido o avanzado, en
+ el campo 
+\emph on
+Habilidad
+\emph default
+ seleccionar 
+\emph on
+Vínculo
+\emph default
+.
+ Al realizar la búsqueda aparece el listado de las 41 cartas con 
+\emph on
+Vínculo
+\emph default
+ entre las que se encuentra la carta buscada
+\emph on
+.
+\end_layout
+
+\begin_layout Itemize
+Coste: Desde el buscador extendido, en el campo junto a 
+\emph on
+Coste=
+\emph default
+ seleccionar 
+\emph on
+3
+\emph default
+.
+ En el buscador avanzado, en el campo 
+\emph on
+Coste
+\emph default
+ seleccionar 
+\emph on
+3
+\emph default
+.
+ Al realizar la búsqueda aparece el listado de las 224 cartas con coste
+ 3 entre las que se encuentra la carta buscada
+\emph on
+.
+\end_layout
+
+\begin_layout Itemize
+Fuerza: Desde el buscador extendido, en el campo junto a 
+\emph on
+Fue=
+\emph default
+ seleccionar 
+\emph on
+3
+\emph default
+.
+ En el buscador avanzado, en el campo 
+\emph on
+FUE
+\emph default
+ seleccionar 
+\emph on
+3
+\emph default
+.
+ Al realizar la búsqueda aparece el listado de cartas con fuerza 3 (84 cartas
+ en el buscador extendido y 86 en el avanzado) entre las que se encuentra
+ la carta buscada
+\emph on
+.
+\end_layout
+
+\begin_layout Itemize
+Resistencia: Desde el buscador extendido, en el campo junto a 
+\emph on
+Res=
+\emph default
+ seleccionar 
+\emph on
+4
+\emph default
+.
+ En el buscador avanzado, en el campo 
+\emph on
+RES
+\emph default
+ seleccionar 
+\emph on
+4
+\emph default
+.
+ Al realizar la búsqueda aparece el listado de las 63 cartas con resistencia
+ 4 entre las que se encuentra la carta buscada
+\emph on
+.
+\end_layout
+
+\begin_layout Itemize
+Artista: En el buscador avanzado seleccionar el campo 
+\emph on
+Artista
+\emph default
+ e ingresar 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+zubeldia
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ en el campo de texto, dejando el menú en 
+\emph on
+contiene
+\emph default
+.
+ Al realizar la búsqueda aparece el listado de las 22 cartas con el término
+ 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+zubeldia
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ como artista entre las que se encuentra la carta buscada
+\emph on
+.
+\end_layout
+
+\begin_layout Itemize
+Formato: En cualquier buscador en el campo 
+\emph on
+Formato
+\emph default
+ seleccionar 
+\emph on
+CdU
+\emph default
+.
+ Al realizar la búsqueda aparece el listado de cartas de formato 
+\emph on
+CdU
+\emph default
+ (436 cartas en el buscador básico y extendido, 448 en el avanzado) entre
+ las que se encuentra la carta buscada
+\emph on
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Incluir o excluir las cartas de tipo ficha de la búsqueda: El buscador básico
+ no dispone de esta opción, sino que por defecto siempre excluye las cartas
+ de tipo ficha de la búsqueda.
+ En el buscador extendido existe un CheckBox que dice “
+\emph on
+Mostrar fichas
+\emph default
+”, dejarlo desactivado.
+ En el caso del buscador avanzado, en el campo 
+\emph on
+Tipo Básico
+\emph default
+ seleccionar 
+\emph on
+Ficha
+\emph default
+ y en el campo 
+\emph on
+y/o/no
+\emph default
+ elegir 
+\emph on
+no
+\emph default
+.
+ Al realizar la búsqueda aparece el listado de las 1030 cartas que no son
+ fichas
+\emph on
+.
+\end_layout
+
+\begin_layout Enumerate
+Listar el resultado de la búsqueda: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Con imágenes: Con el buscador básico no es posible ver este tipo de resultado.
+ En los otros dos seleccionar 
+\emph on
+Grilla
+\emph default
+ en el menú desplegable que se encuentra a la derecha del texto 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Ver:
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ y realizar una búsqueda.
+ Aparecerá la grilla con las imágenes de las cartas.
+\end_layout
+
+\begin_layout Itemize
+Con descripción detallada: Con el buscador básico se accede siempre a este
+ tipo de resultado al realizar una búsqueda.
+ En los otros dos casos seleccionar antes 
+\emph on
+Lista
+\emph default
+ del menú desplegable que se encuentra a la derecha del texto 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Ver:
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Al buscar aparecerá la lista de las cartas con su descripción.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Aplicar criterios de orden a los resultados según los campos de las cartas:
+ Para ordenar de manera descendente por fuerza, en los buscadores extendido
+ y avanzado seleccionar 
+\emph on
+Tipo
+\emph default
+ del menú desplegable junto al texto 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Orden:
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ En el menú contiguo dejar la dirección de la flecha hacia arriba.
+ Al realizar la búsqueda aparece el listado de las cartas ordenadas según
+ su tipo
+\emph on
+.
+\end_layout
+
+\begin_layout Enumerate
+Ver el detalle de una carta buscada: Buscar por el término 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+macizo
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ como nombre.
+ Se mostrará la carta 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Barahai Macizo
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ con su imagen en tamaño completo y en buena calidad, formatos CdU y Eterno
+ en los que es válida y valores de todos sus campos y al final se describen
+ las erratas, limitaciones y prohibiciones de la carta.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Errata: Buscar la carta de nombre 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Elixir de Saviaesencia
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Al final de la descripción de la carta se verá detallada la errata que
+ posee.
+\end_layout
+
+\begin_layout Itemize
+Limitación: Buscar la carta de nombre 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Estatua viviente
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Cerca del final de la descripción de la carta se verá detallado que está
+ limitada en CdU.
+\end_layout
+
+\begin_layout Itemize
+Prohibición: Buscar la carta de nombre 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Hadouken, sede nacional 2013
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Al final de la descripción de la carta se verá que está prohibida (
+\begin_inset Quotes eld
+\end_inset
+
+baneada
+\begin_inset Quotes erd
+\end_inset
+
+) en todos los formatos.
+\end_layout
+
+\begin_layout Itemize
+Descripción de habilidades con palabra clave: Buscar la carta de nombre
+ 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Azzam, jefe del desierto
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ En su descripción tocar sobre 
+\emph on
+Furia
+\emph default
+ o 
+\emph on
+Vínculo
+\emph default
+ para acceder a sus descripciones.
+\end_layout
+
+\begin_layout Itemize
+Visualización de ambas partes de la carta donde aplique(2.9): En una búsqueda
+ de cualquier tipo seleccionar 
+\emph on
+Demonio
+\emph default
+ en el campo 
+\emph on
+Tipo
+\emph default
+.
+ Luego de buscar elegir cualquier resultado.
+ Tocar sobre la imagen para ver el reverso y anverso de la carta.
+\end_layout
+
+\begin_layout Itemize
+Ediciones en las que fue impresa (detallando la rareza que posee en cada
+ una) y la visualización de las mismas: Realizar una búsqueda por nombre
+ escribiendo 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+realidad
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Debajo de la imagen se detallan las ediciones en las que la carta fue impresa
+ y el color de fuente de cada una denota su rareza.
+ Para ver las diferentes ediciones tocar sobre los nombres de ellas, o tocar
+ sobre la parte inferior de la imagen.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Compartir una carta en las redes sociales o aplicaciones de mensajería configura
+das en el dispositivo: Buscar la carta de nombre 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Azzam, jefe del desierto
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ En la vista de detalle de carta seleccionar la opción 
+\emph on
+Compartir
+\emph default
+ del menú desplegable desde el extremo derecho de la pantalla.
+ Luego elegir Gmail para enviarla por email.
+\end_layout
+
+\begin_layout Subsection
+Listas de cartas
+\end_layout
+
+\begin_layout Standard
+Para ver las listas de cartas, desde un buscador acceder desde el menú que
+ se encuentra en el extremo superior derecho de la pantalla a 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Listas de cartas
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Crear lista: En las listas de cartas, en el campo de texto superior escribir
+ 
+\emph on
+Fuertes
+\emph default
+ y aceptar el texto ingresado o tocar sobre el botón 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
++
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ La lista de nombre 
+\emph on
+Fuertes
+\emph default
+ aparece listada en pantalla.
+\end_layout
+
+\begin_layout Enumerate
+Agregar carta a lista: Crear la lista 
+\emph on
+Fuertes
+\emph default
+.
+ Realizar una búsqueda, seleccionar una carta y al ir a la vista de detalle
+ de carta seleccionar la opción 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Agregar a lista
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ del menú desplegable desde el extremo derecho de la pantalla.
+ Luego elegir la lista 
+\emph on
+Fuertes
+\emph default
+.
+ La carta es agregada a la lista y se muestra un mensaje notificándolo.
+\end_layout
+
+\begin_layout Enumerate
+Ver detalle de cartas, con cantidad de cada una y total: Crear la lista
+ 
+\emph on
+Fuertes,
+\emph default
+ agregarle una vez la carta de nombre 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Zustatek, guardián del bosque
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ y dos veces la carta llamada 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Araña gigante
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ En las listas de cartas, al lado del nombre 
+\emph on
+Fuertes
+\emph default
+ se detalla entre paréntesis que posee 3 cartas.
+ Al seleccionar la lista se accede a las 2 cartas diferentes que le hemos
+ agregado (
+\emph on
+Zustatek
+\emph default
+ y la 
+\emph on
+Araña
+\emph default
+) junto a la cantidad respectiva de cada una.
+ Al seleccionar 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Araña gigante
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ se ve su detalle y en la parte superior derecha de la pantalla la cantidad
+ de la misma en la lista (2).
+\end_layout
+
+\begin_layout Enumerate
+Editar o eliminar cantidad de una carta: Crear la lista 
+\emph on
+Fuertes,
+\emph default
+ agregarle la carta de nombre 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Zustatek, guardián del bosque
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ una vez y la carta llamada 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Araña gigante
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ dos veces.
+ En las listas de cartas, seleccionar 
+\emph on
+Fuertes
+\emph default
+ y luego 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Araña gigante
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ En la parte superior derecha de la pantalla aparece su cantidad.
+ Tocar sobre ella y desde el diálogo que se abre tocar sobre 
+\begin_inset Quotes eld
+\end_inset
+
++
+\begin_inset Quotes erd
+\end_inset
+
+ 2 veces para aumentar la cantidad a 4 y seleccionar 
+\emph on
+Ok
+\emph default
+.
+ La cantidad ahora se mostrará como 4.
+ Para eliminar la carta, desde el diálogo elegir 
+\emph on
+Eliminar
+\emph default
+ o tocar sobre 
+\begin_inset Quotes eld
+\end_inset
+
+-
+\begin_inset Quotes erd
+\end_inset
+
+ hasta llevar la cantidad a 0 y seleccionar 
+\emph on
+Ok
+\emph default
+.
+ La carta es eliminada del listado y volveremos a la vista de las cartas
+ de la lista.
+\end_layout
+
+\begin_layout Enumerate
+Eliminar lista: Crear la lista 
+\emph on
+Fuertes
+\emph default
+.
+ En las listas de cartas, tocar sobre la 
+\begin_inset Quotes eld
+\end_inset
+
+X
+\begin_inset Quotes erd
+\end_inset
+
+ junto al nombre 
+\emph on
+Fuertes
+\emph default
+ y confirmar el diálogo.
+ La lista es eliminada y desaparece de la pantalla.
+\end_layout
+
+\begin_layout Enumerate
+Dada una lista, saber si cumple con las condiciones para ser mazo y en qué
+ formatos lo es: Crear la lista 
+\emph on
+Mazo
+\emph default
+.
+ Ir al buscador básico, seleccionar 
+\emph on
+CdU
+\emph default
+ en Formato y la cuarta senda tocando sobre el icono verde.
+ Tocar Buscar.
+ Seleccionar el tercer elemento (
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Zustatek, guardián del bosque
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+) y añadir a la lista 
+\emph on
+Mazo
+\emph default
+.
+ Agregar de la misma manera las siguientes 13 cartas de la lista.
+ Volver al buscador para ir a las listas de las cartas.
+ Seleccionar la lista 
+\emph on
+Mazo
+\emph default
+.
+ Seleccionar y editar la cantidad de cada carta a 4, excepto 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Brújula de Estari
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ que se debe editar a cantidad 2 y 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Zustatek, guardián del bosque
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ que debe dejarse en 1 existencia.
+ Al volver a las listas de cartas, junto al nombre 
+\emph on
+Mazo
+\emph default
+ se detalla que es válido en los formatos 
+\emph on
+CdU
+\emph default
+ y Eterno (
+\emph on
+Et
+\emph default
+).
+\end_layout
+
+\end_body
+\end_document
